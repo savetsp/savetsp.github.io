@@ -32,7 +32,6 @@
 
   <aside class="card" id="act" aria-labelledby="act-title">
     <h2 id="act-title">What you can do</h2>
-    <div class="progress"><strong id="countdown">CB3 votes October 27</strong></div>
     <ol class="steps">
       <!-- To activate a button: put the real link in href and remove class "todo" -->
       <li><span class="num" aria-hidden="true">1</span>
@@ -48,7 +47,7 @@
         <span class="label">Email other leaders<small>Mayor, Governor and more</small></span>
         <a class="go" href="officials.html" aria-label="Email our other elected leaders">Email</a></li>
       <li><span class="num" aria-hidden="true">5</span>
-        <span class="label">Sign the petition<small>2,660 signed as of Oct 16</small></span>
+        <span class="label">Sign the petition<small>Join 2,600+ people who signed</small></span>
         <a class="go" href="https://www.change.org/p/save-tompkins-square-park-s-fitness-area" target="_blank" rel="noopener" aria-label="Sign the petition">Sign</a></li>
       <li><span class="num" aria-hidden="true">6</span>
         <span class="label">Join WhatsApp group<small>Organize with neighbors</small></span>
@@ -170,20 +169,6 @@
     link.classList.remove('todo');
   });
 
-  // Countdown to the vote (New York time)
-  (function () {
-    var vote = new Date('2026-10-27T00:00:00-04:00');
-    var now = new Date();
-    var today = new Date(now.toLocaleString('en-US', { timeZone: 'America/New_York' }));
-    today.setHours(0, 0, 0, 0);
-    var voteDay = new Date(vote.toLocaleString('en-US', { timeZone: 'America/New_York' }));
-    voteDay.setHours(0, 0, 0, 0);
-    var days = Math.round((voteDay - today) / 86400000);
-    var el = document.getElementById('countdown');
-    if (days > 1) el.textContent = 'CB3 votes in ' + days + ' days';
-    else if (days === 1) el.textContent = 'CB3 votes tomorrow';
-    else if (days === 0) el.textContent = 'CB3 votes tonight';
-  })();
 
   document.getElementById('share').addEventListener('click', async function () {
     var msg = document.getElementById('share-msg');
