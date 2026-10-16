@@ -39,7 +39,7 @@
         <a class="go" href="meeting.html" aria-label="Meeting details for CB3 on October 27">Details</a></li>
       <li><span class="num" aria-hidden="true">2</span>
         <span class="label">Email CB3 members<small>They vote on Oct 27</small></span>
-        <a class="go todo" id="email-cb3" href="#" aria-label="Email CB3 members">Email</a></li>
+        <a class="go" href="cb3.html" aria-label="Email Community Board 3">Email</a></li>
       <li><span class="num" aria-hidden="true">3</span>
         <span class="label">Email Harvey Epstein<small>Ask him to keep his promise</small></span>
         <a class="go" href="epstein.html" aria-label="Email Council member Harvey Epstein">Email</a></li>
@@ -63,7 +63,7 @@
     <h2>What's happening</h2>
     <p>Parks got almost $10 million earmarked for the mini pool, and is now creating a problem that does not exist. It wants to also tear down the basketball courts, the calisthenics park and the shaded courtyard, and close them for almost two years.</p>
     <p>Nobody asked for this. On the contrary, the community has been consistent, loud and clear. Repair and maintain. Do not demolish and replace what works.</p>
-    <p class="callout"><strong>On October 15, the CB3 Parks Committee fell for a presentation full of mischaracterizations and endorsed the worst of all options, which closes everything, for everyone, for almost two years.</strong> The full CB3 discusses it on October 27, and we have to be there to be heard. Council member Harvey Epstein can also fulfill his promise to park users and stop this nonsense.</p>
+    <p class="callout"><strong>On October 15, the CB3 Parks Committee fell for a presentation full of mischaracterizations and endorsed the worst of all options, which closes everything, for everyone, for almost two years.</strong> The full CB3 discusses it on October 27, and we have to be there to be heard. Council member Harvey Epstein can also <a href="epstein.html">fulfill his promise to park users</a> and stop this nonsense.</p>
 
     <h2>What the community told Parks</h2>
     <p>This is not our spin. It is in Parks' own records.</p>
@@ -150,32 +150,6 @@
 </footer>
 
 <script>
-  // Email settings. Fill in "to" and the Email button turns on.
-  var EMAILS = {
-    'email-cb3': {
-      to: 'mn03@cb.nyc.gov',
-      subject: "Tompkins Square Park: repair, don't demolish",
-      body: [
-        'Dear Community Board 3 members,',
-        '',
-        'I use Tompkins Square Park and I ask you to reject the plan the Parks Committee endorsed on October 15. It closes the basketball courts, the calisthenics park and the courtyard for almost two years. These spaces work. They need minor repair, not total demolition.',
-        '',
-        'Please demand a better option. Upgrade the pool, repair the courts and the calisthenics surface, keep the courtyard open, make the area more accessible, and never close everything at once.',
-        '',
-        'Thank you,',
-        '[Your name]'
-      ].join('\n')
-    }
-  };
-  Object.keys(EMAILS).forEach(function (id) {
-    var e = EMAILS[id];
-    if (!e.to) return;
-    var link = document.getElementById(id);
-    link.href = 'mailto:' + e.to + '?subject=' + encodeURIComponent(e.subject) + '&body=' + encodeURIComponent(e.body);
-    link.classList.remove('todo');
-  });
-
-
   document.getElementById('share').addEventListener('click', async function () {
     var msg = document.getElementById('share-msg');
     var url = location.href.split('#')[0];

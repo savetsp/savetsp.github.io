@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Email CB3</title>
+<meta name="description" content="Ask Community Board 3 to reject the plan that closes the Tompkins Square Park courts and calisthenics park for almost two years.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://savetsp.github.io/cb3.html">
+<meta property="og:image" content="https://savetsp.github.io/img/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:title" content="Email Community Board 3. Save Tompkins Square Park">
+<meta property="og:description" content="Ask CB3 to reject the plan that closes the courts, the calisthenics park and the courtyard for almost two years. The board votes October 27.">
+<link rel="stylesheet" href="style.css">
+<style>
+  .page { max-width: 720px; padding-top: 20px; padding-bottom: 40px; }
+  .page h1 { font-size: 2rem; line-height: 1.15; margin: 8px 0 16px; }
+  .page h2 { font-size: 1.35rem; margin: 28px 0 8px; }
+  .contact p { margin: 0; }
+  label { display: block; font-weight: 700; margin: 12px 0 4px; }
+  input, textarea {
+    width: 100%; font: inherit; font-size: 1rem; padding: 10px 12px;
+    border: 1px solid #bdbdbd; border-radius: 6px; background: #fff; color: var(--ink);
+  }
+  textarea { min-height: 340px; line-height: 1.45; resize: vertical; }
+  .buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+  .buttons .go { width: auto; padding: 12px 22px; }
+  .go.secondary { background: #fff; color: var(--red-dark); border-color: var(--red-dark); }
+  .go.secondary:hover { background: var(--soft); }
+  .hint { color: var(--muted); font-size: .9rem; }
+  #copy-msg { min-height: 1.2em; color: var(--done); font-size: .9rem; margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap"><a href="index.html" style="color:inherit;text-decoration:none">Save Tompkins Square Park</a><nav class="topnav"><a href="voices.html">Voices</a><a href="index.html#press">News</a></nav></div></div>
+
+<main class="wrap page">
+  <a href="index.html">&larr; Back</a>
+  <h1>Email Community Board 3</h1>
+
+  <h2>Who they are</h2>
+  <p>Community Board 3 is the local board for the East Village and the Lower East Side. Its members are volunteers appointed by the Borough President and our Council members.</p>
+
+  <h2>Why we are writing to them</h2>
+  <p>On October 15, the CB3 Parks Committee endorsed the worst of all options, which closes everything, for everyone, for almost two years. The full board votes on <a href="meeting.html">October 27</a>. Board members care about the community. Let them hear from the people who use the park.</p>
+
+  <section class="meeting contact">
+    <p><strong>Manhattan Community Board 3</strong></p>
+    <p>Email <a href="mailto:mn03@cb.nyc.gov">mn03@cb.nyc.gov</a></p>
+    <p>Phone <a href="tel:+12125335300">212-533-5300</a></p>
+    <p>Office, 59 East 4th Street</p>
+  </section>
+
+  <h2>What we want to say</h2>
+  <p class="hint">Edit the message as you like. Adding a sentence about how you use the park makes it stronger.</p>
+
+  <label for="subject">Subject</label>
+  <input id="subject" type="text" value="Tompkins Square Park: repair, don't demolish">
+
+  <label for="body">Message</label>
+  <textarea id="body">Dear Community Board 3 members,
+
+I use Tompkins Square Park and I ask you to reject the plan the Parks Committee endorsed on October 15. It closes the basketball courts, the calisthenics park and the courtyard for almost two years. These spaces work. They need minor repair, not total demolition.
+
+Please demand a better option. Upgrade the pool, repair the courts and the calisthenics surface, keep the courtyard open, make the area more accessible, and never close everything at once.
+
+Thank you,
+[Your name]</textarea>
+
+  <div class="buttons">
+    <a class="go" id="send" href="#">Email now</a>
+    <button class="go secondary" id="copy" type="button">Copy message</button>
+  </div>
+  <div id="copy-msg" role="status"></div>
+  <p class="hint">"Email now" opens your email app with the message filled in. If you use email in a browser, such as Gmail, copy the message and paste it into a new email to mn03@cb.nyc.gov.</p>
+
+  <p><a href="epstein.html"><strong>Next, email Council Member Harvey Epstein &rarr;</strong></a></p>
+  <a class="back" href="index.html#act">&larr; More things you can do</a>
+</main>
+
+<footer>
+  <div class="wrap">Made by park users and neighbors of Tompkins Square Park. <a href="mailto:salo.coslovsky@gmail.com?subject=Save%20Tompkins%20Square%20Park">Contact the organizers</a></div>
+</footer>
+
+<script>
+  var TO = 'mn03@cb.nyc.gov';
+  var subject = document.getElementById('subject');
+  var body = document.getElementById('body');
+  var msg = document.getElementById('copy-msg');
+
+  document.getElementById('send').addEventListener('click', function (e) {
+    e.preventDefault();
+    location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(body.value);
+  });
+
+  document.getElementById('copy').addEventListener('click', function () {
+    var text = 'To: ' + TO + '\nSubject: ' + subject.value + '\n\n' + body.value;
+    function fallback() {
+      body.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      msg.textContent = ok ? 'Copied. Paste it into a new email to ' + TO + '.' : 'Select the message above and copy it.';
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () {
+        msg.textContent = 'Copied. Paste it into a new email to ' + TO + '.';
+      }, fallback);
+    } else {
+      fallback();
+    }
+  });
+</script>
+</body>
+</html>
