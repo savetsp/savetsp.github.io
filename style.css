@@ -23,14 +23,14 @@
 
   /* Top bar */
   .topbar { border-bottom: 1px solid var(--line); }
-  .topbar .wrap { display: flex; align-items: center; gap: 12px; min-height: 48px; padding-top: 6px; padding-bottom: 6px; font-weight: 800; color: var(--red); letter-spacing: .2px; }
+  .topbar .wrap { display: flex; align-items: center; gap: 12px; min-height: 56px; padding-top: 6px; padding-bottom: 6px; font-weight: 800; color: var(--red); letter-spacing: .2px; font-size: 1.35rem; }
 
   .topnav { margin-left: auto; display: flex; gap: 16px; }
   .topnav a { color: var(--ink); font-weight: 600; font-size: .95rem; text-decoration: none; }
   .topnav a:hover { color: var(--red-dark); text-decoration: underline; }
 
   @media (max-width: 360px) {
-    .topbar .wrap { font-size: .9rem; }
+    .topbar .wrap { font-size: 1rem; }
     .topnav { gap: 10px; }
     .topnav a { font-size: .85rem; }
   }
@@ -114,7 +114,7 @@
     .label small { font-size: .85rem; }
     .go { width: 84px; padding: 9px 0; }
     ol.steps li { padding: 7px 0; }
-    .topbar .wrap { font-size: .95rem; }
+    .topbar .wrap { font-size: 1.12rem; }
     .topnav a { font-size: .9rem; }
   }
   #share-msg { min-height: 1.2em; font-size: .85rem; color: var(--done); margin-top: 6px; }
