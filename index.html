@@ -153,7 +153,7 @@
 <script>
   document.getElementById('share').addEventListener('click', async function () {
     var msg = document.getElementById('share-msg');
-    var url = location.href.split('#')[0];
+    var url = 'https://savetsp.github.io/';  // always share the clean address, never a poster tag
     var text = "Parks wants to close the Tompkins Square Park courts and calisthenics park for almost two years. CB3 votes Oct 27. Here's what you can do: " + url;
     if (navigator.share) {
       try { await navigator.share({ title: "Repair, don't demolish. Save Tompkins Square Park", text: text }); } catch (e) {}
