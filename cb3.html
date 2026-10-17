@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Email CB3</title>
-<meta name="description" content="Ask Community Board 3 to reject the plan that closes the Tompkins Square Park courts and calisthenics park for almost two years.">
+<meta name="description" content="Ask Community Board 3 to reject the plan that closes the Tompkins Square Park courts and calisthenics park for two years.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://savetsp.github.io/cb3.html">
 <meta property="og:image" content="https://savetsp.github.io/img/preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:title" content="Email Community Board 3. Save Tompkins Square Park">
-<meta property="og:description" content="Ask CB3 to reject the plan that closes the courts, the calisthenics park and the courtyard for almost two years. The board votes October 27.">
+<meta property="og:description" content="Ask CB3 to reject the plan that closes the courts, the calisthenics park and the courtyard for two years. The board votes October 27.">
 <link rel="stylesheet" href="style.css">
 <style>
   .page { max-width: 720px; padding-top: 20px; padding-bottom: 40px; }
@@ -40,20 +40,12 @@
   <a href="index.html">&larr; Back</a>
   <h1>Email Community Board 3</h1>
 
-  <h2>Who they are</h2>
-  <p>Community Board 3 is the local board for the East Village and the Lower East Side. Its members are volunteers appointed by the Borough President and our Council members.</p>
+  <p class="lead">They vote October 27 on the plan that closes the courts and the bars for two years. Tell them to reject it.</p>
+  <a class="go big" id="send-top" href="#">Email CB3 now</a>
+  <p class="hint">Opens your email app with the message ready. You can edit it there before sending.</p>
+  <p><a href="#message">Want to change the message first?</a></p>
 
-  <h2>Why we are writing to them</h2>
-  <p>On October 15, the CB3 Parks Committee endorsed the worst of all options, which closes everything, for everyone, for almost two years. The full board votes on <a href="meeting.html">October 27</a>. Board members care about the community. Let them hear from the people who use the park.</p>
-
-  <section class="meeting contact">
-    <p><strong>Manhattan Community Board 3</strong></p>
-    <p>Email <a href="mailto:mn03@cb.nyc.gov">mn03@cb.nyc.gov</a></p>
-    <p>Phone <a href="tel:+12125335300">212-533-5300</a></p>
-    <p>Office, 59 East 4th Street</p>
-  </section>
-
-  <h2>What we want to say</h2>
+  <h2 id="message">What we want to say</h2>
   <p class="hint">Edit the message as you like. Adding a sentence about how you use the park makes it stronger.</p>
 
   <label for="subject">Subject</label>
@@ -62,7 +54,7 @@
   <label for="body">Message</label>
   <textarea id="body">Dear Community Board 3 members,
 
-I use Tompkins Square Park and I ask you to reject the plan the Parks Committee endorsed on October 15. It closes the basketball courts, the calisthenics park and the courtyard for almost two years. These spaces work. They need minor repair, not total demolition.
+I use Tompkins Square Park and I ask you to reject the plan the Parks Committee endorsed on October 15. It closes the basketball courts, the calisthenics park and the courtyard for two years. These spaces work. They need minor repair, not total demolition.
 
 Please demand a better option. Upgrade the pool, repair the courts and the calisthenics surface, keep the courtyard open, make the area more accessible, and never close everything at once.
 
@@ -75,6 +67,19 @@ Thank you,
   </div>
   <div id="copy-msg" role="status"></div>
   <p class="hint">"Email now" opens your email app with the message filled in. If you use email in a browser, such as Gmail, copy the message and paste it into a new email to mn03@cb.nyc.gov.</p>
+
+  <h2>Who they are</h2>
+  <p>Community Board 3 is the local board for the East Village and the Lower East Side. Its members are volunteers appointed by the Borough President and our Council members.</p>
+
+  <h2>Why we are writing to them</h2>
+  <p>On October 15, the CB3 Parks Committee endorsed the worst of all options, which closes everything, for everyone, for two years. The full board votes on <a href="meeting.html">October 27</a>. Board members care about the community. Let them hear from the people who use the park.</p>
+
+  <section class="meeting contact">
+    <p><strong>Manhattan Community Board 3</strong></p>
+    <p>Email <a href="mailto:mn03@cb.nyc.gov">mn03@cb.nyc.gov</a></p>
+    <p>Phone <a href="tel:+12125335300">212-533-5300</a></p>
+    <p>Office, 59 East 4th Street</p>
+  </section>
 
   <p><a href="epstein.html"><strong>Next, email Council Member Harvey Epstein &rarr;</strong></a></p>
   <a class="back" href="index.html#act">&larr; More things you can do</a>
@@ -90,10 +95,10 @@ Thank you,
   var body = document.getElementById('body');
   var msg = document.getElementById('copy-msg');
 
-  document.getElementById('send').addEventListener('click', function (e) {
+  ['send', 'send-top'].forEach(function (id) { document.getElementById(id).addEventListener('click', function (e) {
     e.preventDefault();
     location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(body.value);
-  });
+  }); });
 
   document.getElementById('copy').addEventListener('click', function () {
     var text = 'To: ' + TO + '\nSubject: ' + subject.value + '\n\n' + body.value;

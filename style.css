@@ -105,6 +105,8 @@
     text-decoration: none; cursor: pointer; white-space: nowrap;
   }
   .go:hover { background: var(--red-dark); }
+  .go.big { display: block; width: 100%; max-width: 420px; padding: 16px 0; font-size: 1.25rem; border-radius: 8px; }
+  .lead { font-size: 1.1rem; margin: 0 0 16px; }
   .go.todo, .go.todo:hover { background: var(--todo); cursor: default; }
   li.done .go { background: #fff; color: var(--done); border-color: var(--done); }
   @media (max-width: 480px) {

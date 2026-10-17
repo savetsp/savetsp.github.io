@@ -40,21 +40,12 @@
   <a href="index.html">&larr; Back</a>
   <h1>Email Harvey Epstein</h1>
 
-  <h2>Who he is</h2>
-  <p>Harvey Epstein is the New York City Council member for District 2, which includes the East Village and Tompkins Square Park.</p>
+  <p class="lead">Ask him to keep his promise to park users and stop this plan before CB3 votes on October 27.</p>
+  <a class="go big" id="send-top" href="#">Email Harvey Epstein now</a>
+  <p class="hint">Opens your email app with the message ready. You can edit it there before sending.</p>
+  <p><a href="#message">Want to change the message first?</a></p>
 
-  <h2>Why we are writing to him</h2>
-  <p>He can issue his own advice to the city and to CB3 before the October 27 vote. On May 16, at a Parks session in the park, he "spoke of his commitment to advocating for the wishes of the people and working with Parks to help achieve that," according to <a href="docs/parks-tabling-minutes-2026-05-16.pdf" target="_blank" rel="noopener">Parks' own minutes</a>. The wishes of the people were clear: keep the courts and the fitness area untouched.</p>
-  <p>He promised park users he would protect the park from this misguided attempt at fixing what is not broken. Let's ask him to keep that promise.</p>
-
-  <section class="meeting contact">
-    <p><strong>Council member Harvey Epstein</strong></p>
-    <p>Email <a href="mailto:Harvey@council.nyc.gov">Harvey@council.nyc.gov</a></p>
-    <p>Phone <a href="tel:+12126771077">212-677-1077</a></p>
-    <p>District office, 254 East 4th Street</p>
-  </section>
-
-  <h2>What we want to say</h2>
+  <h2 id="message">What we want to say</h2>
   <p class="hint">Edit the message as you like. Adding a sentence about how you use the park makes it stronger.</p>
 
   <label for="subject">Subject</label>
@@ -80,6 +71,19 @@ Thank you,
   <div id="copy-msg" role="status"></div>
   <p class="hint">"Email now" opens your email app with the message filled in. If you use email in a browser, such as Gmail, copy the message and paste it into a new email to Harvey@council.nyc.gov.</p>
 
+  <h2>Who he is</h2>
+  <p>Harvey Epstein is the New York City Council member for District 2, which includes the East Village and Tompkins Square Park.</p>
+
+  <h2>Why we are writing to him</h2>
+  <p>On May 16, at a Parks session in the park, he "spoke of his commitment to advocating for the wishes of the people," according to <a href="docs/parks-tabling-minutes-2026-05-16.pdf" target="_blank" rel="noopener">Parks' own minutes</a>. The wishes of the people were clear: keep the courts and the fitness area untouched. Let's ask him to keep that promise.</p>
+
+  <section class="meeting contact">
+    <p><strong>Council member Harvey Epstein</strong></p>
+    <p>Email <a href="mailto:Harvey@council.nyc.gov">Harvey@council.nyc.gov</a></p>
+    <p>Phone <a href="tel:+12126771077">212-677-1077</a></p>
+    <p>District office, 254 East 4th Street</p>
+  </section>
+
   <p><a href="officials.html"><strong>Next, email our other elected officials &rarr;</strong></a></p>
   <a class="back" href="index.html#act">&larr; More things you can do</a>
 </main>
@@ -94,10 +98,10 @@ Thank you,
   var body = document.getElementById('body');
   var msg = document.getElementById('copy-msg');
 
-  document.getElementById('send').addEventListener('click', function (e) {
+  ['send', 'send-top'].forEach(function (id) { document.getElementById(id).addEventListener('click', function (e) {
     e.preventDefault();
     location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(body.value);
-  });
+  }); });
 
   document.getElementById('copy').addEventListener('click', function () {
     var text = 'To: ' + TO + '\nSubject: ' + subject.value + '\n\n' + body.value;
