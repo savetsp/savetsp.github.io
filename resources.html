@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Resources</title>
-<meta name="description" content="Sign the petition, share the campaign, print our posters and download our QR code to make your own.">
+<meta name="description" content="Rally your friends, sign the petition, post on social media, print our posters and download our QR code to make your own.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://savetsp.github.io/resources.html">
 <meta property="og:image" content="https://savetsp.github.io/img/preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:title" content="Resources. Save Tompkins Square Park">
-<meta property="og:description" content="Sign the petition, share the campaign, print our posters and download our QR code to make your own.">
+<meta property="og:description" content="Rally your friends, sign the petition, post on social media, print our posters and download our QR code to make your own.">
 <link rel="stylesheet" href="style.css">
 <style>
   .page { max-width: 720px; padding-top: 20px; padding-bottom: 40px; }
@@ -24,7 +24,7 @@
   .poster .buttons { margin-top: 8px; gap: 8px; }
   .hint { color: var(--muted); font-size: .9rem; }
   #post { width: 100%; font: inherit; font-size: 1rem; line-height: 1.45; padding: 10px 12px; border: 1px solid #bdbdbd; border-radius: 6px; background: #fff; color: var(--ink); resize: vertical; }
-  #share-msg, #post-msg { min-height: 1.2em; color: var(--done); font-size: .9rem; margin-top: 8px; }
+  #post-msg { min-height: 1.2em; color: var(--done); font-size: .9rem; margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -42,11 +42,6 @@
   <h2>Sign the petition</h2>
   <p>Join 2,600+ people who signed.</p>
   <div class="buttons"><a class="go" href="https://www.change.org/p/save-tompkins-square-park-s-fitness-area" target="_blank" rel="noopener">Sign petition</a></div>
-
-  <h2>Share with friends</h2>
-  <p>Send the campaign to friends and family, or post it on social media.</p>
-  <div class="buttons"><button class="go" id="share" type="button">Share</button></div>
-  <div id="share-msg" role="status"></div>
 
   <h2>Post on social media</h2>
   <p>Use our hashtags, <strong>#SaveTSP</strong> and <strong>#RepairDontDemolish</strong>, so posts about the campaign can be found together. Here is a post you can copy, or write your own.</p>
@@ -93,21 +88,6 @@
 
 
 <script>
-  document.getElementById('share').addEventListener('click', async function () {
-    var msg = document.getElementById('share-msg');
-    var url = 'https://savetsp.github.io/';  // always share the clean address, never a poster tag
-    var text = "Parks wants to close the courts and the bars at Tompkins Square Park for two years, and CB3's Parks Committee said yes. The full CB3 votes Oct 27. Here's what you can do: " + url;
-    if (navigator.share) {
-      try { await navigator.share({ title: "Repair, don't demolish. Protect our bars, our courts, and our community.", text: text }); } catch (e) {}
-      return;
-    }
-    try {
-      await navigator.clipboard.writeText(text);
-      msg.textContent = 'Message and link copied. Paste it anywhere to share.';
-    } catch (e) {
-      msg.textContent = 'Copy this link to share: ' + url;
-    }
-  });
   document.getElementById('rally').addEventListener('click', function (e) {
     e.preventDefault();
     location.href = 'mailto:?subject=' + encodeURIComponent('Help save Tompkins Square Park') +

@@ -37,7 +37,7 @@
 
   <section class="meeting commit">
     <h2>Will you be there?</h2>
-    <p>Tell us you're coming. A quick email to <strong>savetsp@gmail.com</strong> will help us coordinate.</p>
+    <p>Tell us you're coming. A quick email to <strong>savetsp@gmail.com</strong> will help us coordinate, and we'll send you what you need to be an effective advocate.</p>
     <a class="go big" id="commit" href="#" data-goatcounter-click="commit-to-attend">I'll be there</a>
     <p class="hint">Opens your email app with a short message ready to send.</p>
   </section>
@@ -67,8 +67,8 @@
 <script>
   document.getElementById('commit').addEventListener('click', function (e) {
     e.preventDefault();
-    var body = "I'll be at the full Community Board 3 meeting on Tuesday, October 27, 6:30pm, at PS 20, 166 Essex Street.";
-    location.href = 'mailto:savetsp@gmail.com?subject=' + encodeURIComponent("I'll be at CB3 on October 27") + '&body=' + encodeURIComponent(body);
+    var body = "I'll be at the full Community Board 3 meeting on Tuesday, October 27, 6:30pm, at PS 20, 166 Essex Street.\n\nPlease send me the information I need to be an effective advocate.\n\n[Your name]\n[Your ZIP code]";
+    location.href = 'mailto:savetsp@gmail.com?subject=' + encodeURIComponent("I'll be at CB3 on October 27") + '&body=' + encodeURIComponent(body.replace(/\r?\n/g, '\r\n'));
   });
 </script>
 <script data-goatcounter="https://savetsp.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
