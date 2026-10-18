@@ -121,6 +121,9 @@
     .topnav a { font-size: .9rem; }
   }
   #act .more { margin: 10px 0 0; font-size: .95rem; font-weight: 600; }
+  #act ol.steps li { padding: 12px 0; }
+  #act ol.steps .go { width: 130px; padding: 15px 0; font-size: 1.2rem; border-radius: 8px; }
+  @media (max-width: 480px) { #act ol.steps .go { width: 112px; padding: 14px 0; font-size: 1.1rem; } }
 
   /* Story */
   .story h2 { font-size: 1.35rem; margin: 28px 0 8px; }
