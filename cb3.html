@@ -34,7 +34,7 @@
 </head>
 <body>
 
-<div class="topbar"><div class="wrap"><a href="index.html" style="color:inherit;text-decoration:none">Save Tompkins Square Park</a><nav class="topnav"><a href="voices.html">Voices</a><a href="index.html#press">News</a></nav></div></div>
+<div class="topbar"><div class="wrap"><a href="index.html" style="color:inherit;text-decoration:none">Save Tompkins Square Park</a><nav class="topnav"><a href="voices.html">Voices</a><a href="resources.html">Resources</a><a href="index.html#press">News</a></nav></div></div>
 
 <main class="wrap page">
   <a href="index.html">&larr; Back</a>
@@ -42,14 +42,14 @@
 
   <p class="lead">They vote October 27 on the plan that closes the courts and the bars for two years. Tell them to reject it.</p>
   <a class="go big" id="send-top" href="#">Email CB3 now</a>
-  <p class="hint">Opens your email app with the message ready. You can edit it there before sending.</p>
+  <p class="hint">Opens your email app with the message ready. You can edit it there before sending. A copy goes to savetsp@gmail.com, the campaign&rsquo;s address, so we can keep you posted.</p>
   <p><a href="#message">Want to change the message first?</a></p>
 
   <h2 id="message">What we want to say</h2>
   <p class="hint">Edit the message as you like. Adding a sentence about how you use the park makes it stronger.</p>
 
   <label for="subject">Subject</label>
-  <input id="subject" type="text" value="Tompkins Square Park: repair, don't demolish">
+  <input id="subject" type="text" value="Tompkins Square Park: Repair, don't demolish. Protect our bars, our courts, and our community.">
 
   <label for="body">Message</label>
   <textarea id="body">Dear Community Board 3 members,
@@ -59,6 +59,8 @@ I use Tompkins Square Park and I ask you to reject the plan the Parks Committee 
 Please vote no on all three options, and ask Parks to propose a plan that emphasizes repair and maintenance instead of demolition, and improves accessibility while minimizing disruption to users.
 
 Please share this message with all board members before the vote.
+
+Repair, don't demolish. Protect our bars, our courts, and our community.
 
 Thank you,
 [Your name]
@@ -94,17 +96,18 @@ Thank you,
 
 <script>
   var TO = 'mn03@cb.nyc.gov';
+  var CC = 'savetsp@gmail.com';
   var subject = document.getElementById('subject');
   var body = document.getElementById('body');
   var msg = document.getElementById('copy-msg');
 
   ['send', 'send-top'].forEach(function (id) { document.getElementById(id).addEventListener('click', function (e) {
     e.preventDefault();
-    location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(body.value);
+    location.href = 'mailto:' + TO + '?cc=' + CC + '&subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(body.value);
   }); });
 
   document.getElementById('copy').addEventListener('click', function () {
-    var text = 'To: ' + TO + '\nSubject: ' + subject.value + '\n\n' + body.value;
+    var text = 'To: ' + TO + '\nCc: ' + CC + '\nSubject: ' + subject.value + '\n\n' + body.value;
     function fallback() {
       body.select();
       var ok = false;

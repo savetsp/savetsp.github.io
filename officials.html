@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Email Other Elected Officials</title>
+<title>Write to Officials</title>
 <meta name="description" content="Ask our elected officials to stop the plan to close the Tompkins Square Park courts and calisthenics park for two years.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://savetsp.github.io/officials.html">
 <meta property="og:image" content="https://savetsp.github.io/img/preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:title" content="Email your elected officials. Save Tompkins Square Park">
+<meta property="og:title" content="Write to the Mayor, the Governor and the Borough President. Save Tompkins Square Park">
 <meta property="og:description" content="Ask Powers, Kavanagh, Hoylman-Sigal, Mamdani and Hochul to urge CB3 to vote no on all three options on October 27.">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -35,32 +35,55 @@
   .go.secondary { background: #fff; color: var(--red-dark); border-color: var(--red-dark); }
   .go.secondary:hover { background: var(--soft); }
   .phone { font-size: .95rem; }
-  .all { background: var(--soft); border-radius: 8px; padding: 14px 16px; margin-top: 16px; }
+  .all { background: var(--soft); border-radius: 8px; padding: 14px 16px; margin: 12px 0 8px; }
   .all p { margin: 0 0 10px; }
   #status { min-height: 1.2em; color: var(--done); font-size: .9rem; margin-top: 8px; }
 </style>
 </head>
 <body>
 
-<div class="topbar"><div class="wrap"><a href="index.html" style="color:inherit;text-decoration:none">Save Tompkins Square Park</a><nav class="topnav"><a href="voices.html">Voices</a><a href="index.html#press">News</a></nav></div></div>
+<div class="topbar"><div class="wrap"><a href="index.html" style="color:inherit;text-decoration:none">Save Tompkins Square Park</a><nav class="topnav"><a href="voices.html">Voices</a><a href="resources.html">Resources</a><a href="index.html#press">News</a></nav></div></div>
 
 <main class="wrap page">
   <a href="index.html">&larr; Back</a>
-  <h1>Email our other elected officials</h1>
-  <p>Besides <a href="epstein.html">Council Member Harvey Epstein</a>, five more elected officials have a say. CB3 votes on October 27. They can tell Parks and the board, before the vote, that this plan is wrong for the community. It takes two minutes.</p>
+  <h1>Write to the Mayor, the Governor and the Borough President</h1>
+  <p class="lead">They only take messages through a web form. Tap "Copy and open form", then paste the message into the form. It takes two minutes each.</p>
 
-  <div class="all">
-    <p><strong>Fastest way.</strong> One email to Assembly Member Powers and Senator Kavanagh at once, with the message below. You can edit it in your email app before sending.</p>
-    <div class="row">
-      <a class="go big" href="#" data-send="all">Email both now</a>
-      <button class="go secondary" type="button" data-copy="all">Copy message</button>
-    </div>
-  </div>
+  <ul class="officials">
+    <li class="official">
+      <h3>Zohran Mamdani</h3>
+      <div class="role">Mayor of New York City</div>
+      <p>NYC Parks reports to the Mayor. The state grant can only go to the pool, so the Mayor's office added $3.83 million of city money "because we can't just do a pool," as Parks told CB3. A city that is more affordable, equal and inclusive does not close a free outdoor gym for two years.</p>
+      <div class="row">
+        <a class="go" href="https://www.nyc.gov/mayors-office/contact-the-mayor" target="_blank" rel="noopener" data-copy="mamdani" data-goatcounter-click="form-mamdani">Copy and open form</a>
+        <span class="phone">or call <a href="tel:311">311</a></span>
+      </div>
+    </li>
+    <li class="official">
+      <h3>Kathy Hochul</h3>
+      <div class="role">Governor of New York</div>
+      <p>$6.1 million of this project comes from the Governor's NY SWIMS grant, a program for pools. It should go to the pool.</p>
+      <div class="row">
+        <a class="go" href="https://www.governor.ny.gov/content/governor-contact-form" target="_blank" rel="noopener" data-copy="hochul" data-goatcounter-click="form-hochul">Copy and open form</a>
+        <span class="phone">or call <a href="tel:+15184748390">518-474-8390</a></span>
+      </div>
+    </li>
+    <li class="official">
+      <h3>Brad Hoylman-Sigal</h3>
+      <div class="role">Manhattan Borough President</div>
+      <p>Appoints the members of Community Board 3.</p>
+      <div class="row">
+        <a class="go" href="https://www.manhattanbp.nyc.gov/connect/" target="_blank" rel="noopener" data-copy="hoylman" data-goatcounter-click="form-hoylman">Copy and open form</a>
+        <span class="phone">or call <a href="tel:+12126698300">212-669-8300</a></span>
+      </div>
+    </li>
+  </ul>
+  <div id="status" role="status"></div>
 
-  <h2>1. Or edit the message first</h2>
-  <p class="hint">We add the greeting for each official. Adding a sentence about how you use the park makes it stronger.</p>
+  <h2>The message</h2>
+  <p class="hint">We add the greeting for each official. Edit the message as you like. Adding a sentence about how you use the park makes it stronger.</p>
   <label for="subject">Subject</label>
-  <input id="subject" type="text" value="Tompkins Square Park: repair, don't demolish">
+  <input id="subject" type="text" value="Tompkins Square Park: Repair, don't demolish. Protect our bars, our courts, and our community.">
   <label for="body">Message</label>
   <textarea id="body">I use Tompkins Square Park and I ask you to help stop NYC Parks' plan to demolish the basketball courts, the calisthenics park and the shaded courtyard at East 10th Street and Avenue B, and close them for two years.
 
@@ -68,13 +91,21 @@ These spaces work. They are free, open to all and used every day. Parks' own rec
 
 Please urge Community Board 3, before the October 27 vote, to vote no on all three options, and ask Parks to propose a plan that emphasizes repair and maintenance instead of demolition, and improves accessibility while minimizing disruption to users.
 
+Repair, don't demolish. Protect our bars, our courts, and our community.
+
 Thank you,
 [Your name]
 [Your ZIP code]</textarea>
 
-
-  <h2>2. Send it to each official</h2>
-  <p class="hint">The Borough President, the Mayor and the Governor only take messages through a web form. Tap "Copy and open form", then paste the message into the form.</p>
+  <h2>Assembly Member Powers and Senator Kavanagh</h2>
+  <p>If you used <a href="everyone.html">Email everyone at once</a>, they already have your message. If not, email them here.</p>
+  <div class="all">
+    <p><strong>Both at once.</strong> One email to Assembly Member Powers and Senator Kavanagh, with the message above. You can edit it in your email app before sending. A copy goes to savetsp@gmail.com, the campaign&rsquo;s address, so we can keep you posted.</p>
+    <div class="row">
+      <a class="go big" href="#" data-send="all">Email both</a>
+      <button class="go secondary" type="button" data-copy="all">Copy message</button>
+    </div>
+  </div>
 
   <ul class="officials">
     <li class="official">
@@ -95,35 +126,7 @@ Thank you,
         <span class="phone">or call <a href="tel:+12122985565">212-298-5565</a></span>
       </div>
     </li>
-    <li class="official">
-      <h3>Brad Hoylman-Sigal</h3>
-      <div class="role">Manhattan Borough President</div>
-      <p>Appoints the members of Community Board 3.</p>
-      <div class="row">
-        <a class="go" href="https://www.manhattanbp.nyc.gov/connect/" target="_blank" rel="noopener" data-copy="hoylman">Copy and open form</a>
-        <span class="phone">or call <a href="tel:+12126698300">212-669-8300</a></span>
-      </div>
-    </li>
-    <li class="official">
-      <h3>Zohran Mamdani</h3>
-      <div class="role">Mayor of New York City</div>
-      <p>NYC Parks reports to the Mayor. The state grant can only go to the pool, so the Mayor's office added $3.83 million of city money "because we can't just do a pool," as Parks told CB3. A city that is more affordable, equal and inclusive does not close a free outdoor gym for two years.</p>
-      <div class="row">
-        <a class="go" href="https://www.nyc.gov/mayors-office/contact-the-mayor" target="_blank" rel="noopener" data-copy="mamdani">Copy and open form</a>
-        <span class="phone">or call <a href="tel:311">311</a></span>
-      </div>
-    </li>
-    <li class="official">
-      <h3>Kathy Hochul</h3>
-      <div class="role">Governor of New York</div>
-      <p>$6.1 million of this project comes from the Governor's NY SWIMS grant, a program for pools. It should go to the pool.</p>
-      <div class="row">
-        <a class="go" href="https://www.governor.ny.gov/content/governor-contact-form" target="_blank" rel="noopener" data-copy="hochul">Copy and open form</a>
-        <span class="phone">or call <a href="tel:+15184748390">518-474-8390</a></span>
-      </div>
-    </li>
   </ul>
-  <div id="status" role="status"></div>
 
   <p class="hint">"Email" opens your email app with the message filled in. If you use email in a browser, such as Gmail, tap "Copy message" and paste it into a new email.</p>
 
@@ -181,7 +184,7 @@ Thank you,
     a.addEventListener('click', function (e) {
       e.preventDefault();
       var o = OFFICIALS[a.getAttribute('data-send')];
-      location.href = 'mailto:' + o.to + '?subject=' + encodeURIComponent(subject.value) +
+      location.href = 'mailto:' + o.to + '?cc=savetsp@gmail.com&subject=' + encodeURIComponent(subject.value) +
         '&body=' + encodeURIComponent(fullText(a.getAttribute('data-send')));
     });
   });
