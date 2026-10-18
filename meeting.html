@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CB3 Meeting, Oct 27</title>
+<title>Final Hearing, Oct 27</title>
 <meta name="description" content="Full Community Board 3 meeting, Tuesday, October 27, 6:30pm sharp, PS 20, 166 Essex Street. Plan on being there on time.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://savetsp.github.io/meeting.html">
 <meta property="og:image" content="https://savetsp.github.io/img/preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:title" content="Be there on October 27. Save Tompkins Square Park">
+<meta property="og:title" content="Join us at the final hearing, October 27. Save Tompkins Square Park">
 <meta property="og:description" content="Full CB3 meeting, Tuesday, October 27, 6:30pm sharp, PS 20, 166 Essex Street. Plan on being there on time.">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -21,10 +21,10 @@
   .page li { margin-bottom: 8px; }
   .when p { margin: 0; font-size: 1.1rem; }
   .map { display: inline-block; margin-top: 8px; }
-  .speak { margin-top: 20px; }
-  .speak h2 { margin: 0 0 8px; }
-  .speak p { margin: 0 0 10px; }
-  .speak .go { width: auto; padding: 11px 20px; }
+  .commit { margin-bottom: 20px; }
+  .commit h2 { margin: 0 0 8px; }
+  .commit p { margin: 0 0 12px; }
+  .hint { color: var(--muted); font-size: .9rem; }
 </style>
 </head>
 <body>
@@ -33,34 +33,30 @@
 
 <main class="wrap page">
   <a href="index.html">&larr; Back</a>
-  <h1>Be there on October 27</h1>
+  <h1>Join us at the final hearing</h1>
+
+  <section class="meeting commit">
+    <h2>Will you be there?</h2>
+    <p>Tell us you're coming. A quick email to <strong>savetsp@gmail.com</strong> will help us coordinate.</p>
+    <a class="go big" id="commit" href="#" data-goatcounter-click="commit-to-attend">I'll be there</a>
+    <p class="hint">Opens your email app with a short message ready to send.</p>
+  </section>
 
   <section class="meeting when">
     <p><strong>Full Community Board 3 meeting</strong></p>
-    <p>Tuesday, October 27, 6:30pm</p>
+    <p>Tuesday, October 27, 6:30pm sharp</p>
     <p>PS 20, 166 Essex Street</p>
     <a class="map" href="https://www.google.com/maps/search/?api=1&query=PS+20%2C+166+Essex+Street%2C+New+York%2C+NY" target="_blank" rel="noopener">Open in maps</a>
   </section>
 
-  <section class="meeting speak">
-    <h2>Want to speak? Join the WhatsApp group first.</h2>
-    <p>Technically, only 4 people on our side get to speak, for 2 minutes each. Let's make those 8 minutes count. If you'd like to speak, please join the WhatsApp group first and say so. We will all choose four speakers, each making a different set of points, and they will sign up ahead of time.</p>
-    <p><strong>Be there at 6:30pm sharp.</strong> Public comment comes first.</p>
-    <p><strong>Not speaking?</strong> Come, fill the room, applaud us, boo and whistle, bring a banner.</p>
-    <p><a class="go" href="https://chat.whatsapp.com/IRpMwqccUCREfpbpInWK45" target="_blank" rel="noopener">Join the WhatsApp group</a></p>
-  </section>
+  <h2>What the meeting is</h2>
+  <p>Community Board 3 is the local board for the East Village and the Lower East Side. Its members are volunteers appointed by the Borough President and our Council members. Once a month the full board meets in public and votes on the recommendations of its committees.</p>
+  <p>On October 27 it votes on the plan its Parks Committee endorsed on October 15, which closes the basketball courts, the calisthenics park and the courtyard for two years. Public comment comes first, so be there at 6:30pm sharp.</p>
 
   <h2>Why it matters</h2>
-  <p>The full board votes on the plan its Parks Committee endorsed on October 15, which closes the courts, the calisthenics park and the courtyard for two years. Board members need to see the people who use the park.</p>
+  <p>This is the final hearing on the plan. Board members need to see the people who use the park. A full room shows them who this plan hurts. Bring friends, and bring banners that show how this plan will disrupt your community.</p>
 
-  <h2>How to be heard</h2>
-  <ul>
-    <li><strong>Bring friends.</strong> A full room matters even for those who don't speak.</li>
-    <li><strong>Bring banners</strong> that show how this plan will disrupt your community.</li>
-  </ul>
-  <p>All community board meetings are open to the public.</p>
-
-  <p><a href="everyone.html"><strong>Next, email CB3, our elected officials and Parks at once &rarr;</strong></a></p>
+  <p><a href="everyone.html"><strong>Next, email public leaders &rarr;</strong></a></p>
   <a class="back" href="index.html#act">&larr; More things you can do</a>
 </main>
 
@@ -68,6 +64,13 @@
   <div class="wrap">Made by park users and neighbors of Tompkins Square Park. <a href="mailto:salo.coslovsky@gmail.com?subject=Save%20Tompkins%20Square%20Park">Contact the organizers</a></div>
 </footer>
 
+<script>
+  document.getElementById('commit').addEventListener('click', function (e) {
+    e.preventDefault();
+    var body = "I'll be at the full Community Board 3 meeting on Tuesday, October 27, 6:30pm, at PS 20, 166 Essex Street.";
+    location.href = 'mailto:savetsp@gmail.com?subject=' + encodeURIComponent("I'll be at CB3 on October 27") + '&body=' + encodeURIComponent(body);
+  });
+</script>
 <script data-goatcounter="https://savetsp.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

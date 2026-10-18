@@ -120,7 +120,7 @@
     .topbar .wrap { font-size: 1.12rem; }
     .topnav a { font-size: .9rem; }
   }
-  #share-msg { min-height: 1.2em; font-size: .85rem; color: var(--done); margin-top: 6px; }
+  #act .more { margin: 10px 0 0; font-size: .95rem; font-weight: 600; }
 
   /* Story */
   .story h2 { font-size: 1.35rem; margin: 28px 0 8px; }
