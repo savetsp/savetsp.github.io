@@ -78,7 +78,7 @@ Thank you,</textarea>
 
   <h2>Who gets it</h2>
   <ul>
-    <li><strong>Community Board 3.</strong> Votes on the plan October 27. Through the board office and Trever Holland, chair of its Parks Committee.</li>
+    <li><strong>Community Board 3, including Trever Holland, chair of its Parks Committee.</strong> Votes on the plan October 27.</li>
     <li><strong>Council Member Harvey Epstein.</strong> Promised park users he would listen.</li>
     <li><strong>Senator Brian Kavanagh and Assembly Member Keith Powers.</strong> Represent the East Village in Albany, where most of the money comes from.</li>
     <li><strong>Borough President Brad Hoylman-Sigal.</strong> Appoints the members of Community Board 3.</li>
@@ -96,7 +96,7 @@ Thank you,</textarea>
 </footer>
 
 <script>
-  var TO = ['mn03@cb.nyc.gov', 'treverholland@gmail.com', 'sstetzer@cb.nyc.gov', 'Harvey@council.nyc.gov', 'kavanagh@nysenate.gov', 'powersk@nyassembly.gov', 'info@manhattanbp.nyc.gov', 't.shimamura@parks.nyc.gov', 'steve.simon@parks.nyc.gov', 'max.goodstein@parks.nyc.gov'].join(',');
+  var TO = ['mn03@cb.nyc.gov', 'sstetzer@cb.nyc.gov', 'Harvey@council.nyc.gov', 'kavanagh@nysenate.gov', 'powersk@nyassembly.gov', 'info@manhattanbp.nyc.gov', 't.shimamura@parks.nyc.gov', 'steve.simon@parks.nyc.gov', 'max.goodstein@parks.nyc.gov'].join(',');
   document.getElementById('to-list').textContent = TO.split(',').join(', ');
   var CC = 'savetsp@gmail.com';
   var subject = document.getElementById('subject');
@@ -105,7 +105,7 @@ Thank you,</textarea>
 
   ['send', 'send-top'].forEach(function (id) { document.getElementById(id).addEventListener('click', function (e) {
     e.preventDefault();
-    location.href = 'mailto:' + TO + '?cc=' + CC + '&subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(body.value);
+    location.href = 'mailto:' + TO + '?cc=' + CC + '&subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(body.value.replace(/\r?\n/g, '\r\n'));
   }); });
 
   document.getElementById('copy').addEventListener('click', function () {

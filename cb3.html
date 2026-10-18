@@ -101,7 +101,7 @@ Thank you,</textarea>
 
   ['send', 'send-top'].forEach(function (id) { document.getElementById(id).addEventListener('click', function (e) {
     e.preventDefault();
-    location.href = 'mailto:' + TO + '?cc=' + CC + '&subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(body.value);
+    location.href = 'mailto:' + TO + '?cc=' + CC + '&subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(body.value.replace(/\r?\n/g, '\r\n'));
   }); });
 
   document.getElementById('copy').addEventListener('click', function () {

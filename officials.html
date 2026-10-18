@@ -173,7 +173,7 @@ Thank you,</textarea>
       e.preventDefault();
       var o = OFFICIALS[a.getAttribute('data-send')];
       location.href = 'mailto:' + o.to + '?cc=savetsp@gmail.com&subject=' + encodeURIComponent(subject.value) +
-        '&body=' + encodeURIComponent(fullText(a.getAttribute('data-send')));
+        '&body=' + encodeURIComponent(fullText(a.getAttribute('data-send')).replace(/\r?\n/g, '\r\n'));
     });
   });
 
