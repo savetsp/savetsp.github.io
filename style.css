@@ -185,9 +185,9 @@
 
   /* Banner above the hero */
   .banner { background: #efe6d3; border-bottom: 1px solid var(--line); }
-  .banner img { display: block; width: 100%; height: 120px; object-fit: cover; object-position: center 55%; }
+  .banner img { display: block; width: 100%; height: 90px; object-fit: cover; object-position: center 55%; }
   @media (min-width: 600px) { .banner img { object-position: center 22%; } }
-  @media (min-width: 600px) { .banner img { height: 170px; } }
+  @media (min-width: 600px) { .banner img { height: 140px; } }
 
   /* Oct 22 update: be there by 6:20, smaller walk box, poster after RSVP on phones */
   .hero.plain .sub { font-size: .95rem; color: var(--muted); margin-top: 2px; }
@@ -200,3 +200,4 @@
   .ig-label svg { flex: none; }
   .topnav.ig-only { margin-left: auto; width: auto; }
   @media (max-width: 480px) { .topbar .wrap:has(.ig-only) { flex-wrap: nowrap; } }
+  .hero.plain .bring { font-size: .95rem; margin-top: 16px; }
