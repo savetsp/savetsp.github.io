@@ -188,3 +188,15 @@
   .banner img { display: block; width: 100%; height: 120px; object-fit: cover; object-position: center 55%; }
   @media (min-width: 600px) { .banner img { object-position: center 22%; } }
   @media (min-width: 600px) { .banner img { height: 170px; } }
+
+  /* Oct 22 update: be there by 6:20, smaller walk box, poster after RSVP on phones */
+  .hero.plain .sub { font-size: .95rem; color: var(--muted); margin-top: 2px; }
+  .walk.small { padding: 10px 14px; margin-top: 16px; font-size: .95rem; }
+  .walk.small p { margin: 0 0 4px; }
+  .poster-phone { display: block; width: 100%; max-width: 260px; height: auto; margin: 18px auto 0; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
+  @media (max-width: 899px) { .hero-poster { display: none; } }
+  @media (min-width: 900px) { .poster-phone { display: none; } }
+  .ig-label { display: inline-flex; align-items: center; gap: 6px; }
+  .ig-label svg { flex: none; }
+  .topnav.ig-only { margin-left: auto; width: auto; }
+  @media (max-width: 480px) { .topbar .wrap:has(.ig-only) { flex-wrap: nowrap; } }
