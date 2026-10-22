@@ -48,6 +48,12 @@
   .hero p { margin: 0; color: rgba(255,255,255,.92); max-width: 640px; }
   .hero .tagline { color: #fff; font-weight: 700; font-size: 1.2rem; line-height: 1.3; margin-bottom: 10px; }
   .hero .date { color: #fff; font-weight: 700; }
+  .hero .kicker { color: #fff; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+  .hero .where { color: #fff; font-weight: 700; font-size: 1.2rem; margin-top: 8px; }
+  .walk { margin-top: 18px; padding: 14px 16px; max-width: 640px; background: rgba(0,0,0,.45); border-left: 4px solid var(--red); border-radius: 6px; }
+  .walk h2 { margin: 0 0 6px; font-size: 1.3rem; }
+  .walk p { margin: 0 0 8px; }
+  .walk .go.big { margin-top: 12px; }
 
   .hero .covered { margin-top: 8px; font-size: .85rem; }
   .hero .covered a { color: #fff; text-decoration: underline; text-underline-offset: 2px; opacity: .9; }
@@ -147,3 +153,11 @@
   .back { display: inline-block; margin-top: 24px; font-weight: 700; }
 
   footer { border-top: 1px solid var(--line); padding: 20px 0 40px; color: var(--muted); font-size: .9rem; }
+
+  /* Oct 27 hero with poster */
+  .hero-poster { display: block; width: 100%; max-width: 300px; height: auto; margin: 18px auto 0; border-radius: 4px; box-shadow: 0 4px 16px rgba(0,0,0,.5); }
+  .hero-grid .covered { grid-column: 1 / -1; }
+  @media (min-width: 900px) {
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: center; }
+    .hero-poster { margin: 0; }
+  }
