@@ -23,6 +23,9 @@
     width: 100%; font: inherit; font-size: 1rem; padding: 10px 12px;
     border: 1px solid #bdbdbd; border-radius: 6px; background: #fff; color: var(--ink);
   }
+  .signer { display: flex; gap: 12px; }
+  .signer > div { flex: 2; min-width: 0; }
+  .signer > div + div { flex: 1; }
   textarea { min-height: 340px; line-height: 1.45; resize: vertical; }
   .buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
   .buttons .go { width: auto; padding: 12px 22px; }
@@ -41,6 +44,11 @@
   <h1>Email Harvey Epstein</h1>
 
   <p class="lead">Ask him to keep his promise to park users and stop this plan before CB3 votes on October 27.</p>
+  <div class="signer">
+    <div><label for="name">Your name</label><input id="name" type="text" autocomplete="name"></div>
+    <div><label for="zip">ZIP code</label><input id="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="10"></div>
+  </div>
+  <p class="hint">We add them to the end of your message. Officials pay more attention to signed messages from constituents.</p>
   <a class="go big" id="send-top" href="#">Email Harvey Epstein now</a>
   <p class="hint">Opens your email app with the message ready. You can edit it there before sending. A copy goes to savetsp@gmail.com, the campaign&rsquo;s address, so we can keep you posted.</p>
   <p><a href="#message">Want to change the message first?</a></p>
@@ -62,9 +70,7 @@ What we are asking: Please urge Community Board 3 to vote no on all three option
 
 Please make your position known before the vote.
 
-Thank you,
-[Your name]
-[Your ZIP code]</textarea>
+Thank you,</textarea>
 
   <div class="buttons">
     <a class="go" id="send" href="#">Email now</a>
@@ -100,14 +106,21 @@ Thank you,
   var subject = document.getElementById('subject');
   var body = document.getElementById('body');
   var msg = document.getElementById('copy-msg');
+  var nameBox = document.getElementById('name');
+  var zipBox = document.getElementById('zip');
+
+  // The message with the name and ZIP from the boxes at the top added after "Thank you,"
+  function signed() {
+    return [body.value.replace(/\s+$/, ''), nameBox.value.trim(), zipBox.value.trim()].filter(Boolean).join('\n');
+  }
 
   ['send', 'send-top'].forEach(function (id) { document.getElementById(id).addEventListener('click', function (e) {
     e.preventDefault();
-    location.href = 'mailto:' + TO + '?cc=' + CC + '&subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(body.value.replace(/\r?\n/g, '\r\n'));
+    location.href = 'mailto:' + TO + '?cc=' + CC + '&subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(signed().replace(/\r?\n/g, '\r\n'));
   }); });
 
   document.getElementById('copy').addEventListener('click', function () {
-    var text = 'To: ' + TO + '\nCc: ' + CC + '\nSubject: ' + subject.value + '\n\n' + body.value;
+    var text = 'To: ' + TO + '\nCc: ' + CC + '\nSubject: ' + subject.value + '\n\n' + signed();
     function fallback() {
       body.select();
       var ok = false;

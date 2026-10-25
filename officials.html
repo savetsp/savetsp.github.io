@@ -22,6 +22,9 @@
     width: 100%; font: inherit; font-size: 1rem; padding: 10px 12px;
     border: 1px solid #bdbdbd; border-radius: 6px; background: #fff; color: var(--ink);
   }
+  .signer { display: flex; gap: 12px; }
+  .signer > div { flex: 2; min-width: 0; }
+  .signer > div + div { flex: 1; }
   textarea { min-height: 300px; line-height: 1.45; resize: vertical; }
   .hint { color: var(--muted); font-size: .9rem; }
   .officials { list-style: none; padding: 0; margin: 0; }
@@ -48,6 +51,11 @@
   <a href="index.html">&larr; Back</a>
   <h1>Write to the Mayor and the Governor</h1>
   <p class="lead">They only take messages through a web form. Tap "Copy and open form", then paste the message into the form. It takes two minutes each.</p>
+  <div class="signer">
+    <div><label for="name">Your name</label><input id="name" type="text" autocomplete="name"></div>
+    <div><label for="zip">ZIP code</label><input id="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="10"></div>
+  </div>
+  <p class="hint">We add them to the end of your message. Officials pay more attention to signed messages from constituents.</p>
 
   <ul class="officials">
     <li class="official">
@@ -82,9 +90,7 @@ What we are asking: Please urge Community Board 3 to vote no on all three option
 
 Please make your position known before the vote.
 
-Thank you,
-[Your name]
-[Your ZIP code]</textarea>
+Thank you,</textarea>
 
   <h2>Assembly Member Powers and Senator Kavanagh</h2>
   <p>If you used <a href="everyone.html">Email public leaders</a>, they already have your message. If not, email them here.</p>
@@ -139,9 +145,16 @@ Thank you,
   var subject = document.getElementById('subject');
   var body = document.getElementById('body');
   var status = document.getElementById('status');
+  var nameBox = document.getElementById('name');
+  var zipBox = document.getElementById('zip');
+
+  // The message with the name and ZIP from the boxes at the top added after "Thank you,"
+  function signed() {
+    return [body.value.replace(/\s+$/, ''), nameBox.value.trim(), zipBox.value.trim()].filter(Boolean).join('\n');
+  }
 
   function fullText(key) {
-    return OFFICIALS[key].greeting + '\n\n' + body.value;
+    return OFFICIALS[key].greeting + '\n\n' + signed();
   }
 
   // Copy text, with a fallback for browsers that block the clipboard API
