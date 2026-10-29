@@ -15,16 +15,6 @@
 <meta property="og:description" content="On Oct 27, the park community showed up and CB3 sent Parks' plan back to committee. Next round: Nov 12. Here's what you can do.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css?v=1022d">
-<style>
-  #act .signer { grid-column: 2 / -1; display: flex; gap: 10px; }
-  #act .signer > div { flex: 2; min-width: 0; }
-  #act .signer > div + div { flex: 1; }
-  #act .signer label { display: block; font-weight: 700; font-size: .85rem; margin: 0 0 3px; }
-  #act .signer input {
-    width: 100%; font: inherit; font-size: 1rem; padding: 8px 10px;
-    border: 1px solid #bdbdbd; border-radius: 6px; background: #fff; color: var(--ink);
-  }
-</style>
 </head>
 <body>
 
@@ -55,11 +45,7 @@
         <a class="go" href="https://www.change.org/p/save-tompkins-square-park-s-courts-and-fitness-area" target="_blank" rel="noopener" aria-label="Sign the petition">Sign</a></li>
       <li><span class="num" aria-hidden="true">4</span>
         <span class="label">Get updates<small>Send us an email and we will keep you posted</small></span>
-        <a class="go" id="updates" href="mailto:savetsp@gmail.com?subject=Keep%20me%20updated&amp;body=Please%20send%20me%20updates%20about%20Tompkins%20Square%20Park.%0A%0AName%3A%20%0AZIP%20code%3A%20" aria-label="Email savetsp@gmail.com to get campaign updates" data-goatcounter-click="get-updates">Sign up</a>
-        <div class="signer">
-          <div><label for="name">Your name</label><input id="name" type="text" autocomplete="name"></div>
-          <div><label for="zip">ZIP code</label><input id="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="10"></div>
-        </div></li>
+        <a class="go" href="mailto:savetsp@gmail.com?subject=Keep%20me%20updated&amp;body=Please%20send%20me%20updates%20about%20Tompkins%20Square%20Park.%0A%0AName%3A%20%0AZIP%20code%3A%20" aria-label="Email savetsp@gmail.com to get campaign updates" data-goatcounter-click="get-updates">Sign up</a></li>
     </ol>
     <p class="more"><a href="resources.html">More ways to help: rally friends, social media, posters &rarr;</a></p>
   </aside>
@@ -175,17 +161,6 @@
   <div class="wrap">Made by park users and neighbors of Tompkins Square Park. <a href="mailto:salo.coslovsky@gmail.com?subject=Save%20Tompkins%20Square%20Park">Contact the organizers</a></div>
 </footer>
 
-<script>
-  // Get updates: the name and ZIP from the boxes go at the end of the email
-  document.getElementById('updates').addEventListener('click', function (e) {
-    var name = document.getElementById('name').value.trim();
-    var zip = document.getElementById('zip').value.trim();
-    if (!name && !zip) return;
-    e.preventDefault();
-    var body = ['Please send me updates about Tompkins Square Park.', '', name, zip].filter(function (line, i) { return i < 2 || line; }).join('\r\n');
-    location.href = 'mailto:savetsp@gmail.com?subject=' + encodeURIComponent('Keep me updated') + '&body=' + encodeURIComponent(body);
-  });
-</script>
 <script data-goatcounter="https://savetsp.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
