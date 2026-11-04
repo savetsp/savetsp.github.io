@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Public Leaders</title>
+<meta name="description" content="NYC Parks offered to take the calisthenics park out of its project. Tell our leaders to hold it to that.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://savetsp.github.io/contact.html">
+<meta property="og:image" content="https://savetsp.github.io/img/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:title" content="Contact public leaders. Save the Bars">
+<meta property="og:description" content="NYC Parks offered to take the calisthenics park out of its project. Tell our leaders to hold it to that.">
+<link rel="stylesheet" href="style.css?v=1022d">
+<style>
+  .page { max-width: 720px; padding-top: 20px; padding-bottom: 40px; }
+  .page h1 { font-size: 2rem; line-height: 1.15; margin: 8px 0 12px; }
+  .page h2 { font-size: 1.35rem; margin: 28px 0 8px; }
+  .buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+  .buttons .go { width: 170px; padding: 12px 0; }
+  .go.secondary { background: #fff; color: var(--red-dark); border-color: var(--red-dark); }
+  .go.secondary:hover { background: var(--soft); }
+  .hint { color: var(--muted); font-size: .9rem; margin: 8px 0 0; }
+  .tags { font-weight: 700; }
+  .msg { min-height: 1.2em; color: var(--done); font-size: .9rem; margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap"><a href="index.html" style="color:inherit;text-decoration:none">Save Tompkins Square Park</a><nav class="topnav"><a href="faq.html">FAQ</a><a href="voices.html">Voices</a><a href="resources.html">Resources</a><a href="index.html#press">News</a><a href="https://www.instagram.com/save.tompkins/" target="_blank" rel="noopener" class="ig-link" aria-label="Follow us on Instagram" data-goatcounter-click="instagram-nav"><svg class="ig" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><defs><radialGradient id="iggrad" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6" fill="url(#iggrad)"/><rect x="5" y="5" width="14" height="14" rx="4.2" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.3" cy="7.7" r="1.05" fill="#fff"/></svg></a></nav></div></div>
+
+<main class="wrap page">
+  <a href="index.html">&larr; Back</a>
+  <h1>Contact public leaders</h1>
+  <p class="lead">NYC Parks offered to take the calisthenics park out of its project. Tell our leaders to hold it to that.</p>
+
+  <h2>1. Post a video and tag the Mayor</h2>
+  <p>Film 30 seconds at the bars or courts, on Instagram or TikTok. Say who you are and why this place matters. Tag <span class="tags">@nycmayor</span> and <span class="tags">@save.tompkins</span>, and use <span class="tags">#SaveTSP #SaveTompkins</span>.</p>
+  <div class="buttons"><button class="go" id="copy-caption" type="button" data-goatcounter-click="copy-video-caption">Copy caption</button></div>
+  <div class="msg" id="caption-msg" role="status"></div>
+
+  <h2>2. Send one email</h2>
+  <p>It goes to Parks Commissioner Tricia Shimamura and Manhattan Borough President Brad Hoylman-Sigal.</p>
+  <div class="buttons"><a class="go" id="send" href="#" data-goatcounter-click="contact-email">Email now</a></div>
+  <p class="hint">Opens your email app with the message ready. Add your name, and a sentence of your own if you'd like. A copy goes to savetsp@gmail.com, so we can keep you posted.</p>
+
+  <h2>3. Fill out two forms</h2>
+  <p>The Mayor and the Comptroller take messages by web form. Copy the message, then paste it in. On the Mayor's form, ask them to share it with Deputy Mayor for Operations Julia Kerson, who oversees Parks.</p>
+  <div class="buttons">
+    <button class="go secondary" id="copy-message" type="button" data-goatcounter-click="copy-contact-message">Copy message</button>
+    <a class="go" href="https://www.nyc.gov/mayors-office/contact-the-mayor" target="_blank" rel="noopener" data-goatcounter-click="form-mayor">Mayor</a>
+    <a class="go" href="https://comptroller.nyc.gov/about/contact-our-office/#help-form" target="_blank" rel="noopener" data-goatcounter-click="form-comptroller">Comptroller</a>
+  </div>
+  <div class="msg" id="message-msg" role="status"></div>
+
+  <a class="back" href="resources.html">More things you can do &rarr;</a>
+</main>
+
+<footer>
+  <div class="wrap">Made by park users and neighbors of Tompkins Square Park. <a href="mailto:salo.coslovsky@gmail.com?subject=Save%20Tompkins%20Square%20Park">Contact the organizers</a></div>
+</footer>
+
+<script>
+  var TO = 't.shimamura@parks.nyc.gov,info@manhattanbp.nyc.gov';
+  var CC = 'savetsp@gmail.com';
+  var SUBJECT = "Tompkins Square Park: Go forward with NYC Parks' original Option 3";
+  var MESSAGE = "Dear public leaders,\n\n" +
+    "NYC Parks wants to demolish and rebuild the calisthenics park, the basketball courts and a shaded courtyard at Tompkins Square Park, closing everything for two years or more. Nobody asked for this.\n\n" +
+    "Parks has already offered a better way. Please urge NYC Parks to go forward with its original Option 3, which removes the calisthenics park from the scope of the project, with modifications to minimize disruption to basketball players, and to ensure the area remains accessible, as it has always been.\n\n" +
+    "For details, see savetsp.github.io\n\n" +
+    "Thank you,\n";
+  var CAPTION = "Save the bars at Tompkins Square Park! @nycmayor, NYC Parks offered to take the calisthenics park out of its project. Please hold it to that. savetsp.github.io @save.tompkins #SaveTSP #SaveTompkins";
+
+  document.getElementById('send').addEventListener('click', function (e) {
+    e.preventDefault();
+    location.href = 'mailto:' + TO + '?cc=' + CC + '&subject=' + encodeURIComponent(SUBJECT) + '&body=' + encodeURIComponent(MESSAGE.replace(/\n/g, '\r\n'));
+  });
+
+  function copy(text, box, done) {
+    function show(ok) { box.textContent = ok ? done : 'Could not copy. Please try again, or write your own.'; }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () { show(true); }, function () { show(fallback(text)); });
+    } else {
+      show(fallback(text));
+    }
+  }
+  function fallback(text) {
+    var area = document.createElement('textarea');
+    area.value = text;
+    document.body.appendChild(area);
+    area.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(area);
+    return ok;
+  }
+  document.getElementById('copy-caption').addEventListener('click', function () {
+    copy(CAPTION, document.getElementById('caption-msg'), 'Copied. Paste it into your post.');
+  });
+  document.getElementById('copy-message').addEventListener('click', function () {
+    copy(MESSAGE, document.getElementById('message-msg'), 'Copied. Paste it into each form.');
+  });
+</script>
+<script data-goatcounter="https://savetsp.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
