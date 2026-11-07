@@ -62,6 +62,11 @@
   .refs { font-size: .9rem; padding-left: 1.6em; }
   .refs li { margin-bottom: 8px; overflow-wrap: anywhere; }
   table.examples td { vertical-align: top; } table.examples td:nth-child(2), table.examples td:nth-child(3) { white-space: nowrap; } table.examples tr.first td { border-top: 1px solid var(--line); }
+  .rec-top { float: right; width: 42%; max-width: 270px; margin: 1.75em 0 10px 18px; shape-outside: inset(1.75em 0 0 0); }
+  .rec-top img { width: 100%; height: auto; display: block; border-radius: 4px; }
+  @media (min-width: 700px) { .rec-top img { height: 427px; object-fit: cover; object-position: 75% center; } }
+  .rec-top figcaption { font-size: .78rem; color: var(--muted); margin-top: 3px; }
+  @media (max-width: 520px) { .rec-top { width: 45%; margin-left: 12px; } }
 </style>
 </head>
 <body>
@@ -72,6 +77,7 @@
   <a href="index.html">&larr; Back</a>
   <h1>What Parks' own records say</h1>
   <p>NYC Parks says the Tompkins bars are in poor condition and must be torn down. So we read Parks' own records and they tell a very different story.</p>
+  <figure class="rec-top"><img src="img/bars-in-snow.jpg" alt="People training on the Tompkins Square Park bars in the snow" width="600" height="800"></figure>
   <p><strong>In short, the Tompkins bars may be the sturdiest in the city.</strong> They are close to 40 years old and stand in the busiest of the 41 Manhattan parks with adult fitness equipment. Yet in 61 park-wide inspections from May 2000 to August 2026 and 3,458 repair orders from January 2010 to October 2026, Parks never recorded serious damage to them. At most one repair concerns the bars, a weld in 2010, which Parks rated as low priority. Their only other problems, worn paint and a worn surface, went away when Parks did basic maintenance. <strong>Equipment elsewhere fares much worse.</strong> We checked the same kinds of records for 64 other parks with adult fitness areas. At 40 of them, including newly renovated ones, Parks found serious, chronic or premature problems: equipment that comes loose, turns wobbly or breaks down surprisingly early and surprisingly often.</p>
   <details class="small">
     <summary>Which parks, and what counts as serious, chronic or premature</summary>
