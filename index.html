@@ -15,6 +15,38 @@
 <meta property="og:description" content="NYC Parks offered to remove the calisthenics park from the scope of its project. Please attend the CB3 meeting and support this option.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css?v=1022d">
+<style>
+  .tl { margin: 14px 0 16px; padding: 12px 16px 10px; background: var(--soft); border-radius: 8px; }
+  .tl figcaption { font-size: .9rem; color: var(--muted); margin-bottom: 18px; }
+  .tl .legend { white-space: nowrap; margin-right: 14px; display: inline-block; margin-top: 4px; }
+  .tlplot { position: relative; height: 74px; margin: 0 6px; }
+  .tline { position: absolute; left: 0; right: 0; top: 52px; border-top: 2px solid var(--line); }
+  .tdot { position: absolute; top: 46px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; border: 2px solid var(--muted); background: #fff; box-sizing: border-box; }
+  .tdot.y { background: var(--red); border-color: var(--red); }
+  .tdot.inl { position: static; display: inline-block; margin: 0 4px 0 0; vertical-align: -1px; }
+  .trepaint { position: absolute; top: 4px; bottom: 0; border-left: 2px dashed var(--done); }
+  .trepaint span { position: absolute; left: 5px; top: 0; font-size: .75rem; font-weight: 600; line-height: 1.15; color: var(--done); white-space: nowrap; }
+  .taxis { position: relative; height: 18px; margin: 4px 6px 0; border-top: 1px solid var(--line); }
+  .ttick { position: absolute; top: 2px; transform: translateX(-50%); font-size: .75rem; color: var(--muted); }
+  .tdot.w { background: #f6b4ae; border-color: var(--red); }
+  .tdot.n { background: var(--line); border-color: var(--line); }
+  .trep { position: absolute; top: 28px; width: 0; height: 0; margin-left: -6px; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 10px solid var(--done); }
+  .trep.inl { position: static; display: inline-block; margin: 0 4px 0 0; vertical-align: 0; }
+  .trepaint .tleft { left: 5px; right: auto; top: -14px; text-align: left; }
+  .tl2 .tlplot { height: 96px; }
+  .tl2 .tline.l1 { top: 40px; } .tl2 .tline.l2 { top: 80px; }
+  .tl2 .tdot.lane1 { top: 34px; } .tl2 .tdot.lane2 { top: 74px; }
+  .tl2 .tdot.y { z-index: 2; }
+  .tl2 .tdot.n { background: #8a8a8a; border-color: #8a8a8a; }
+  .tdot.c { background: #e8a33a; border-color: #e8a33a; z-index: 2; }
+  .tl2 .lanelab { position: absolute; left: 0; font-size: .72rem; color: var(--muted); }
+  .tl2 .lanelab.l1 { top: 18px; } .tl2 .lanelab.l2 { top: 58px; }
+  .tl2 .trepaint span { top: -2px; }
+  .tsum { font-size: .88rem; margin: 10px 0 0; }
+    .tdot:not(.inl) { width: 9px; height: 9px; margin-left: -4.5px; top: 48px; border-width: 1.5px; }
+  @media (max-width: 480px) { .tdot:not(.inl) { width: 9px; height: 9px; margin-left: -4.5px; top: 48px; border-width: 1.5px; } }
+  .recs-list h3 { font-size: 1rem; margin: 14px 0 2px; } .recs-list ul { margin: 0 0 4px; padding-left: 20px; } .recs-list li { margin: 1px 0; font-size: .92rem; }
+</style>
 </head>
 <body>
 
@@ -61,7 +93,7 @@
     <p>Council Member Harvey Epstein and Assembly Member Keith Powers have <a href="https://www.instagram.com/p/DfA9BGnJz-o/" target="_blank" rel="noopener">endorsed</a> these requests. We expect that Senator-elect Grace Lee will join them soon.</p>
 
     <h2>Did NYC Parks listen to the community?</h2>
-    <p>Not really. Again and again, and as shown by their <a href="told-parks.html">own records</a>, Parks recorded unanimous feedback in favor of keeping the courts and calisthenics park untouched. But then, at the first CB3 meeting, NYC Parks officials argued forcefully for demolishing and rebuilding everything anyway.</p>
+    <p>Not really. Again and again, and as shown by their <a href="told-parks.html">own records</a>, Parks recorded unanimous community feedback in favor of keeping the courts and calisthenics park untouched. But then, at the first CB3 meeting, NYC Parks officials argued forcefully for demolishing and rebuilding everything anyway.</p>
 
     <h2>Used every day, all year</h2>
     <div class="photos">
@@ -103,16 +135,148 @@
     <p><a href="voices.html#community"><strong>Read more from the community &rarr;</strong></a></p>
 
     <h2>What does NYC Parks say?</h2>
-    <p>NYC Parks officials have claimed that the equipment is broken, expired, non-compliant, and inaccessible. They also claim that the area poses a liability risk to the city, and that it sits atop a clogged drainage pipe. <strong>The evidence they present for these claims, however, is slim or absent.</strong></p>
-    <p><strong>Durability.</strong> Parks itself <a href="docs/parks-presentation-2026-10-15.pdf#page=24" target="_blank" rel="noopener">admits</a> it has not investigated the structural integrity of the bars. Users can attest the bars are rock-solid. Actually, Parks&rsquo; own records also buttress this point. <a href="parks-records.html">See what Parks&rsquo; own records say &rarr;</a></p>
-    <p><strong>Compliance.</strong> The &ldquo;code&rdquo; that the bars allegedly infringe (ASTM F3101) is actually a private voluntary and optional standard. Unlike children's playgrounds, where IPEMA offers independent certification, in the outdoor fitness industry manufacturers self-certify.</p>
-    <p><strong>Accessibility.</strong> The area is accessible and is used by people with disabilities or rehabilitating from injury, and by people with <a href="https://www.instagram.com/reel/DfIgaimtAHB/" target="_blank" rel="noopener">strollers</a>, <a href="https://www.instagram.com/p/-JsUrdkwuP/" target="_blank" rel="noopener">crutches</a> and wheelchairs (we see them there). This is an open-ended calisthenics park, not a weight room where machines have seats, movable weights, hinges and cables that dictate how one should use the equipment. At Tompkins, people adapt the bars to their bodies and levels of mobility. <a href="accessibility.html" data-goatcounter-click="accessibility-note-home"><strong>Read our note on accessibility &rarr;</strong></a></p>
-    <p><strong>Liability.</strong> Legal risk might be a concern when the city is buying new equipment that has never been tested by real users. What if it breaks? What if someone pinches a finger? These bars have been in use for nearly 40 years. That record shows the risk is low. New equipment has no such record, so updating the area will increase risk, not lower it.</p>
-    <p><strong>Drainage.</strong> Parks has not shared its pipe inspections. And it told CB3 it could run a new drain line while &ldquo;minimally disrupting the existing fitness.&rdquo; So why demolish everything on top?</p>
+    <p>Now that NYC Parks has money to spend, its staffers decided that the Tompkins bars are broken, expired, non-compliant and non-accessible. They also claim that the area poses a liability risk to the city, and that it sits atop a clogged drainage pipe. <strong>The evidence they provide for these claims, however, is slim or absent.</strong> And as we show below, NYC Parks&rsquo; own records tell a very different story.</p>
+
+    <h3 id="records">1. Durability</h3>
+    <p>Parks itself <a href="docs/parks-presentation-2026-10-15.pdf#page=24" target="_blank" rel="noopener">admits</a> it has not investigated the structural integrity of the bars. Anyone who visits the site, sees how the bars are used, or tries to give them a vigorous shake can attest they are rock-solid.</p>
+    <p><strong>Even NYC Parks&rsquo; own records agree.</strong> Parks inspectors checked Tompkins 61 times from May 2000 to August 2026, and Parks staff wrote 3,458 work orders for the park from January 2010 to October 2026. In all that paper trail, Parks never recorded serious damage to the bars. At most, it shows one weld in 2010, which Parks rated as low priority. The bars&rsquo; only other problems, worn paint and a worn surface, went away when Parks did basic maintenance. <strong>That makes them some of the sturdiest, most dependable outdoor fitness equipment in the city.</strong></p>
+    <p><a href="parks-records.html"><strong>Read the full analysis &rarr;</strong></a></p>
+
+    <h3>2. Accessibility</h3>
+    <p>The area is accessible and is used by people with disabilities or rehabilitating from injury, and by people with <a href="https://www.instagram.com/reel/DfIgaimtAHB/" target="_blank" rel="noopener">strollers</a>, <a href="https://www.instagram.com/p/-JsUrdkwuP/" target="_blank" rel="noopener">crutches</a> and wheelchairs (we see them there). This is an open-ended calisthenics park, not a weight room where machines have seats, movable weights, hinges and cables that dictate how one should use the equipment. At Tompkins, people adapt the bars to their bodies and levels of mobility. <a href="accessibility.html" data-goatcounter-click="accessibility-note-home"><strong>Read our note on accessibility &rarr;</strong></a></p>
+    <p><strong>Parks&rsquo; own records point the same way.</strong> When inspectors wrote up the rubber surface under the bars, in <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?class=Hazard&amp;conditionhazard=90297" target="_blank" rel="noopener">2017</a> and <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?class=Hazard&amp;conditionhazard=105229" target="_blank" rel="noopener">2019</a>, they described it as an &ldquo;accessible area.&rdquo; And starting in 2008, its inspectors regularly recorded <a href="https://data.cityofnewyork.us/resource/2jvr-j6ne.json?element_id=532462" target="_blank" rel="noopener">an accessible sign</a> in the park, the last time in <a href="https://data.cityofnewyork.us/resource/yg3y-7juh.json?inspection_id=120680" target="_blank" rel="noopener">January 2019</a>.</p>
+
+    <h3>3. Compliance</h3>
+    <p>The &ldquo;code&rdquo; that the bars allegedly infringe (ASTM F3101) is actually a private voluntary and optional standard. Unlike children's playgrounds, where IPEMA offers independent certification, in the outdoor fitness industry manufacturers self-certify.</p>
+
+    <h3>4. Liability</h3>
+    <p>Parks says the bars are a liability risk. But risk comes from equipment that fails, and these bars have been in use for nearly 40 years. Such a long record is tangible evidence that the risk is low. New equipment has no record at all. Replacing proven bars with untested ones adds risk. It does not remove it.</p>
+
+    <h3>5. Drainage</h3>
+    <p>Parks has not shared its pipe inspections. And it told CB3 it could run a new drain line while &ldquo;minimally disrupting the existing fitness.&rdquo; So why demolish everything on top?</p>
+    <p>Parks has also said that stormwater detention tanks tend to go under basketball courts. DEP&rsquo;s own <a href="https://data.cityofnewyork.us/d/df32-vzax" target="_blank" rel="noopener">records</a> say otherwise: of its 335 underground tanks citywide, built or planned, 25 sit under a basketball court, about 7%. Most sit under no court or field at all.</p>
+
     <p><a href="faq.html"><strong>Read our FAQ &rarr;</strong></a></p>
 
-    <h2 id="macombs">What do Parks' &ldquo;new, improved and safer&rdquo; bars look like?</h2>
-    <p>Look at Macombs Dam Park, next to Yankee Stadium. This is our future if NYC Parks rebuilds the area. These bars were rebuilt <a href="https://bronx.news12.com/outdoor-workout-area-in-popular-bronx-park-reopens-after-covid-closure" target="_blank" rel="noopener">in 2020</a>. We went there in early Nov '26, and saw a wreck. Users tell us each hole in these photos used to be a bar that fell while being used for its intended purpose. The remaining ones are quite unstable and seem to pose a safety hazard. New is not better.</p>
+    <h2 id="macombs">At Tompkins, new will most likely be a downgrade</h2>
+    <p>New equipment is not just unknown. Where Parks has installed it, its own records show it is a downgrade. We checked the same kinds of records for 64 other parks with outdoor adult fitness areas. At 40 of them, including many newly renovated ones, Parks found serious, chronic or premature problems. The new equipment comes loose, gets wobbly, or breaks down surprisingly early and surprisingly often.</p>
+    <details>
+      <summary>See examples from Parks&rsquo; records, up to five per park</summary>
+  <div class="recs-list">
+    <h3>Columbus Park, Manhattan, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=6292" target="_blank" rel="noopener">built 2018</a></h3>
+    <ul>
+      <li>Aug 2019: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=1952082" target="_blank" rel="noopener">&ldquo;Reattach broken arm of exercise equipment.&rdquo;</a></li>
+      <li>Nov 2019: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=1982314" target="_blank" rel="noopener">&ldquo;missing hand crank on workout equipment&rdquo;</a></li>
+      <li>Jul 2023: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2461604" target="_blank" rel="noopener">&ldquo;exercise hand rings need new bolts&rdquo;</a></li>
+      <li>Jul 2023: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2461608" target="_blank" rel="noopener">&ldquo;exercise bars most of them need to be re welded&rdquo;</a></li>
+    </ul>
+    <h3>Chelsea Park, Manhattan, install date unknown</h3>
+    <ul>
+      <li>Aug 2013: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=773584" target="_blank" rel="noopener">&ldquo;Repair/Ck Loose pull up bars on Adult PE&rdquo;</a></li>
+      <li>Oct 2016: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=1385322" target="_blank" rel="noopener">&ldquo;5 loose boards on exercise eq&rdquo;</a></li>
+      <li>Aug 2017: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=1528992" target="_blank" rel="noopener">&ldquo;Tighten parallel bar on work out equipment.&rdquo;</a></li>
+      <li>Dec 2021: <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?conditionhazard=136882&amp;class=Hazard" target="_blank" rel="noopener">&ldquo;Rotted, splintered or jagged, slat on incline board&rdquo;</a></li>
+      <li>Dec 2021: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2254024" target="_blank" rel="noopener">&ldquo;Repair 1 splintered VR Slat Incline Exercise Board&rdquo;</a></li>
+    </ul>
+    <h3>Bloomingdale Playground, Manhattan, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=8748" target="_blank" rel="noopener">built 2019</a></h3>
+    <ul>
+      <li>May 2022: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2307443" target="_blank" rel="noopener">&ldquo;Bolt missing at adult exercise equipment at Bloomingdale.&rdquo;</a></li>
+      <li>Oct 2022: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2381440" target="_blank" rel="noopener">&ldquo;Please repair exercise equipment (Looses)&rdquo;</a></li>
+      <li>Mar 2024: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2521270" target="_blank" rel="noopener">&ldquo;Missing latch at exercise station by gate.&rdquo;</a></li>
+      <li>May 2024: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2539088" target="_blank" rel="noopener">&ldquo;Exercise equipment, landscape backpress/chest- bolt broken needs to be replaced&rdquo;</a></li>
+    </ul>
+    <h3>J. Hood Wright Park, Manhattan, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=8627" target="_blank" rel="noopener">built 2018</a></h3>
+    <ul>
+      <li>Jan 2024: <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?conditionhazard=619844&amp;class=Condition" target="_blank" rel="noopener">&ldquo;removed, hand ring&rdquo;</a></li>
+      <li>Jun 2024: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2550820" target="_blank" rel="noopener">&ldquo;Missing metal ring strap In fitness area&rdquo;</a></li>
+      <li>Sep 2024: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2580167" target="_blank" rel="noopener">&ldquo;Replace Missing gym ring in fitness area in jhood&rdquo;</a></li>
+      <li>Oct 2024: <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?conditionhazard=644046&amp;class=Condition" target="_blank" rel="noopener">&ldquo;handring missing&rdquo;</a></li>
+      <li>Mar 2025: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2633833" target="_blank" rel="noopener">&ldquo;RING MISSING ON ACROBATICS APPARATUS IN ADULT EXERCISE AREA&rdquo;</a></li>
+    </ul>
+    <h3>Fort Tryon Park, Manhattan, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=6851" target="_blank" rel="noopener">built 2019</a></h3>
+    <ul>
+      <li>Oct 2021: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2221077" target="_blank" rel="noopener">&ldquo;Repair 1 spinner on Adult Exercise Equipment&rdquo;</a></li>
+      <li>Sep 2025: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2689226" target="_blank" rel="noopener">&ldquo;Step pod circle for pull up bars in work out equipment&rdquo;</a></li>
+      <li>Oct 2025: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2700584" target="_blank" rel="noopener">&ldquo;Fall PEI 2025 Stepping pod is loose in the work out area.&rdquo;</a></li>
+      <li>Oct 2025: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2700585" target="_blank" rel="noopener">&ldquo;Fall PEI 2025. Standing sit up bar screws are loose at the exercise equipment&rdquo;</a></li>
+      <li>Dec 2025: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2725166" target="_blank" rel="noopener">&ldquo;Exercise padding on work out equipment damaged. Wear and tear&rdquo;</a></li>
+    </ul>
+    <h3>Inwood Hill Park, Manhattan, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=7366" target="_blank" rel="noopener">built 2018</a></h3>
+    <ul>
+      <li>Nov 2024: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2602902" target="_blank" rel="noopener">&ldquo;Tighten up loose pull up bar&rdquo;</a></li>
+      <li>Dec 2024: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2618102" target="_blank" rel="noopener">&ldquo;Secure exercise bar. Place 2 missing bolts&rdquo;</a></li>
+      <li>Jun 2026: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2768566" target="_blank" rel="noopener">&ldquo;Tighten up loose bar adult exercise equipment&rdquo;</a></li>
+    </ul>
+    <h3>Jaime Campiz Playground, Brooklyn, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=1076111" target="_blank" rel="noopener">built 2018</a></h3>
+    <ul>
+      <li>Oct 2021: <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?conditionhazard=530066&amp;class=Condition" target="_blank" rel="noopener">&ldquo;station removed, push-up bar&rdquo;</a></li>
+      <li>Mar 2022: <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?conditionhazard=139385&amp;class=Hazard" target="_blank" rel="noopener">&ldquo;Sharp protruding, edges due to damaged/missing lower horizontal bar on ex eqpt near BBCT. Close to Hope St and Marcy Ave.&rdquo;</a></li>
+      <li>Jul 2026: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2773798" target="_blank" rel="noopener">&ldquo;Repair 1 PE push up bar ratting/loose Exercise Area&rdquo;</a></li>
+    </ul>
+    <h3>Sunset Park, Brooklyn, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=7239" target="_blank" rel="noopener">built 2018</a></h3>
+    <ul>
+      <li>Sep 2020: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2067350" target="_blank" rel="noopener">&ldquo;Replace missing piece exercise equipment see attached&rdquo;</a></li>
+      <li>Jun 2021: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2182434" target="_blank" rel="noopener">&ldquo;deliver exercise equipment handle to Rep&rdquo;</a></li>
+      <li>Mar 2024: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2527656" target="_blank" rel="noopener">&ldquo;Tighten bolts on exercise equipment there is no tension/resistance&rdquo;</a></li>
+      <li>Jul 2026: <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?conditionhazard=694370&amp;class=Condition" target="_blank" rel="noopener">&ldquo;damaged, 1 of 2 Tai Chi wheels missing&rdquo;</a></li>
+      <li>Aug 2026: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2785057" target="_blank" rel="noopener">&ldquo;Repair broken exercise equipment -Play equipt.&rdquo;</a></li>
+    </ul>
+    <h3>Linden Park, Brooklyn, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=7006" target="_blank" rel="noopener">built 2016</a></h3>
+    <ul>
+      <li>Jul 2023: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2457540" target="_blank" rel="noopener">&ldquo;replace cover to pull up station&rdquo;</a></li>
+      <li>Mar 2024: <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?conditionhazard=163875&amp;class=Hazard" target="_blank" rel="noopener">&ldquo;Sharp protruding, metal on damaged squat press exercise equipment&rdquo;</a></li>
+      <li>Aug 2024: <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?conditionhazard=639101&amp;class=Condition" target="_blank" rel="noopener">&ldquo;damaged, /missing bar at the squat Press.&rdquo;</a></li>
+    </ul>
+    <h3>Jacob Joffe Fields, Brooklyn, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=7233" target="_blank" rel="noopener">built 2019</a></h3>
+    <ul>
+      <li>Sep 2019: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=1961799" target="_blank" rel="noopener">&ldquo;Broken foot rest on exercise equipment ( foot rest is at canarsie park&rdquo;</a></li>
+      <li>Feb 2020: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2002839" target="_blank" rel="noopener">&ldquo;replace missing pedal on exercise equipment&rdquo;</a></li>
+      <li>Aug 2021: <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?conditionhazard=131609&amp;class=Hazard" target="_blank" rel="noopener">&ldquo;Loose/missing apparatus creating fall hazard, free swinging foot rest and broken equipment partially cautioned off&rdquo;</a></li>
+      <li>Aug 2021: <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?conditionhazard=525174&amp;class=Condition" target="_blank" rel="noopener">&ldquo;damaged, loose pull-up bars (patron complaints)&rdquo;</a></li>
+      <li>Jun 2022: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2320666" target="_blank" rel="noopener">&ldquo;Repair broken exercise bar at location- see notes&rdquo;</a></li>
+    </ul>
+    <h3>Flushing Meadows Corona Park, Mauro fitness area, Queens, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=7271" target="_blank" rel="noopener">built 2019</a></h3>
+    <ul>
+      <li>Oct 2021: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2221625" target="_blank" rel="noopener">&ldquo;Kopan1st section of workout equipment- the sitting bench has a missing cap&rdquo;</a></li>
+      <li>Dec 2021: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2254512" target="_blank" rel="noopener">&ldquo;Shops/Workout Equipment(Captain's Chair) left armrest is loose&rdquo;</a></li>
+      <li>Dec 2021: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2254515" target="_blank" rel="noopener">&ldquo;Shops/Workout equipment bars/Two clamp bolt covers are loose&rdquo;</a></li>
+      <li>Mar 2023: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2418658" target="_blank" rel="noopener">&ldquo;Loose cap on bar in fitness section causing pinch hazard&rdquo;</a></li>
+      <li>Jun 2023: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2441707" target="_blank" rel="noopener">&ldquo;Shops/Fix/replace adults work out bench loose.&rdquo;</a></li>
+    </ul>
+    <h3>Bronx Park, Bronx, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=8773" target="_blank" rel="noopener">built 2019</a></h3>
+    <ul>
+      <li>Sep 2020: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2071145" target="_blank" rel="noopener">&ldquo;Exercise equipment is broken&rdquo;</a></li>
+      <li>Sep 2020: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2071254" target="_blank" rel="noopener">&ldquo;Exercise equipment (BIKE) pedal is broken - See Brian&rdquo;</a></li>
+      <li>Oct 2020: <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?conditionhazard=120863&amp;class=Hazard" target="_blank" rel="noopener">&ldquo;Rotted, splintered or jagged, wood on exercise stumps in BBCT area&rdquo;</a></li>
+      <li>Mar 2021: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2129546" target="_blank" rel="noopener">&ldquo;Rpr/Rpl all broken exercise equipment&rdquo;</a></li>
+      <li>Oct 2021: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2227692" target="_blank" rel="noopener">&ldquo;Exercise equipment. Broken handle. Zone 1/ Brady Playground&rdquo;</a></li>
+    </ul>
+    <h3>Colucci Playground, Bronx, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=8564" target="_blank" rel="noopener">built 2020</a></h3>
+    <ul>
+      <li>Sep 2022: <a href="https://data.cityofnewyork.us/resource/ibip-ftv5.json?conditionhazard=148577&amp;class=Hazard" target="_blank" rel="noopener">&ldquo;Loose/missing apparatus creating fall hazard, on EE&rdquo;</a></li>
+      <li>Sep 2022: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2373094" target="_blank" rel="noopener">&ldquo;Reattach loose cables on fitness equipment DIA #148577&rdquo;</a></li>
+      <li>Jun 2023: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2441155" target="_blank" rel="noopener">&ldquo;Work out equipment is broken&rdquo;</a></li>
+      <li>Sep 2023: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2480652" target="_blank" rel="noopener">&ldquo;Exercise equipment has damaged handle, see pics&rdquo;</a></li>
+      <li>Oct 2023: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2486865" target="_blank" rel="noopener">&ldquo;Pls replace rotted wood slats on sit up station - See Brian&rdquo;</a></li>
+    </ul>
+    <h3>Van Cortlandt Park, Bronx, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=8878" target="_blank" rel="noopener">built 2024</a></h3>
+    <ul>
+      <li>Sep 2025: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2689583" target="_blank" rel="noopener">&ldquo;Remove 3inch protruding metal. adj push up exercise equipment. GD&rdquo;</a></li>
+      <li>Sep 2025: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2689584" target="_blank" rel="noopener">&ldquo;exercise pushup bar, support leg spilt in several area. Cloak&rdquo;</a></li>
+      <li>Oct 2025: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2702930" target="_blank" rel="noopener">&ldquo;3" metal protruding from the ground. remove. adj to arm pull up&rdquo;</a></li>
+      <li>Oct 2025: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2702935" target="_blank" rel="noopener">&ldquo;Missing cap on exercise machine. basketball court area. GD&rdquo;</a></li>
+    </ul>
+    <h3>Pelham Bay Park, Bronx, <a href="https://data.cityofnewyork.us/resource/4hcv-tc5r.json?trackerid=6160" target="_blank" rel="noopener">built 2017</a></h3>
+    <ul>
+      <li>Sep 2019: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=1963667" target="_blank" rel="noopener">&ldquo;Peifall19. Mt exercise leg press bar. Broken off. aileen rayn exercise sta.&rdquo;</a></li>
+      <li>Oct 2019: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=1965550" target="_blank" rel="noopener">&ldquo;PEI 2019-Replace broken leg press unit-broken piece is in the HQ office&rdquo;</a></li>
+      <li>Nov 2019: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=1976919" target="_blank" rel="noopener">&ldquo;Repair. 1. Exercise bike padel. Missing. Work out sta. Exercise bike.&rdquo;</a></li>
+      <li>Nov 2020: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2088938" target="_blank" rel="noopener">&ldquo;Repair. 1. Leg press Exercise sta. Broken off leg bar. Eileen ryan Exercise sta&rdquo;</a></li>
+      <li>Mar 2021: <a href="https://data.cityofnewyork.us/resource/8sdw-8vja.json?evt_code=2127619" target="_blank" rel="noopener">&ldquo;PEI SPRING 21 - Broken leg press machine&rdquo;</a></li>
+    </ul>
+  </div>
+    </details>
+    <p>Macombs Dam Park, next to Yankee Stadium, shows what that looks like. Parks rebuilt the bars there <a href="https://bronx.news12.com/outdoor-workout-area-in-popular-bronx-park-reopens-after-covid-closure" target="_blank" rel="noopener">in 2020</a>. We went in early November and saw a wreck. Users tell us each hole in these photos used to be a bar that fell while being used for its intended purpose. The remaining ones are quite unstable and seem to pose a safety hazard. This is our future if NYC Parks rebuilds the area. <strong>New is not better.</strong></p>
     <div class="photos">
       <figure><img src="img/macombs-hole.jpg" alt="A broken cover over an open hole in the cracked surface where a bar used to stand" loading="lazy"><figcaption>Where a bar stood</figcaption></figure>
       <figure><img src="img/macombs-cone.jpg" alt="A traffic cone next to a hole and a crack in the surface, with caution tape on a nearby post" loading="lazy"><figcaption>Cone and caution tape</figcaption></figure>
@@ -124,9 +288,8 @@
       <video controls preload="metadata" playsinline poster="img/macombs-bars-2-poster.jpg" src="docs/macombs-bars-2.mp4" style="display:block;width:100%;border-radius:6px"></video>
     </div>
     <p class="photo-credit" style="text-align:center">Watch the bars shake. Videos by Nena, Macombs Dam Park, Nov 2026</p>
-    <p class="more"><a href="parks-records.html">Macombs is not alone. Parks&rsquo; own records show the same pattern across the city. See what Parks&rsquo; own records say &rarr;</a></p>
 
-    <h2>Are you guys just weirdo-NIMBY-types?</h2>
+    <h2>One last thing, maybe you guys are some weirdo-NIMBY types?</h2>
     <p>No. We have no objection to an improved pool for kids, and no objection to climate resilience. We are not opposing the building of new housing either, as that's not even on the agenda. We want to retain an open public space that works. That's why we want CB3 to endorse NYC Parks' original Option 3, which removes the calisthenics park from the scope of the project, with modifications to minimize disruption to basketball players, and to ensure the area remains accessible, as it has always been.</p>
     <p>So maybe we are KIMBY: <strong>K</strong>eep <strong>I</strong>t in <strong>M</strong>y <strong>B</strong>ack <strong>Y</strong>ard.</p>
 
