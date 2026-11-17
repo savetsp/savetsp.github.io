@@ -33,7 +33,10 @@
   .go.secondary { background: #fff; color: var(--red-dark); border-color: var(--red-dark); }
   .go.secondary:hover { background: var(--soft); }
   .hint { color: var(--muted); font-size: .9rem; }
-  #copy-msg, #form-msg { min-height: 1.2em; color: var(--done); font-size: .9rem; margin-top: 8px; }
+  #copy-msg { min-height: 1.2em; color: var(--done); font-size: .9rem; margin-top: 8px; }
+  .msgbox { margin-top: 24px; }
+  .msgbox summary { cursor: pointer; font-weight: 700; color: var(--red-dark); }
+  .big { margin-top: 16px; }
 </style>
 </head>
 <body>
@@ -44,59 +47,46 @@
   <a href="index.html">&larr; Back</a>
   <h1>Email city leaders</h1>
 
-  <p class="lead">Tue, Nov&nbsp;24, CB3 might allow NYC Parks to use city money to make Tompkins Square Park less affordable, less accessible, and less inclusive. Tell them what you think.</p>
+  <p class="lead">On Tue, Nov 24, Community Board 3 votes on NYC Parks&rsquo; plan for Tompkins Square Park. Ask the Board to reject it and ask for a better one. It takes one minute.</p>
+
   <div class="signer">
     <div><label for="name">Your name</label><input id="name" type="text" autocomplete="name"></div>
     <div><label for="zip">ZIP code</label><input id="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="10"></div>
   </div>
-  <p class="hint">We add them to the end of your message. Officials pay more attention to signed messages from constituents.</p>
   <a class="go big" id="send-top" href="#" data-goatcounter-click="email-leaders-top">Email now</a>
-  <p class="hint">Opens your email app with the message ready. You can edit it there before sending. A copy goes to savetsp@gmail.com, the campaign&rsquo;s address, so we can keep you posted.</p>
-  <p><a href="#message">Want to change the message first?</a></p>
+  <p class="hint">Opens your email app with the message ready, signed with your name and ZIP. It goes to Community Board 3, with copies to Parks Commissioner Tricia Shimamura, Borough President Brad Hoylman-Sigal, and us (savetsp@gmail.com).</p>
 
-  <h2 id="message">What we want to say</h2>
-  <p class="hint">Edit the message as you like. Adding a sentence about how you use the park makes it stronger.</p>
+  <details class="msgbox">
+    <summary>See or edit the message</summary>
+    <label for="subject">Subject</label>
+    <input id="subject" type="text" value="Please reject the Tompkins Square Park plan and ask for a better one on November 24">
+    <label for="body">Message</label>
+    <textarea id="body">Dear Members of Community Board 3, Commissioner Shimamura, and Borough President Hoylman-Sigal,
 
-  <p class="to"><strong>To</strong> <span id="to-list"></span></p>
+I urge the full Board to reject NYC Parks’ plan for Tompkins Square Park when it votes on Tuesday, November 24, and to ask Parks for a plan that makes the area fully ADA accessible at low cost, without closing down the area for an extended period.
 
-  <label for="subject">Subject</label>
-  <input id="subject" type="text" value="Tompkins Square Park: Save the bars and half courts">
+The current plan would remove the calisthenics bars and replace them with lesser ones. A better plan would keep the park open, affordable, and welcoming to people with disabilities. I ask the Board to call on Parks to do the following.
 
-  <label for="body">Message</label>
-  <textarea id="body">Dear city leaders,
+Bring the area into full ADA compliance now, starting with fixing the inadequate transitions between the paving and the rubber surface that Parks installed in 2024.
 
-I use Tompkins Square Park, and I am very concerned about NYC Parks' plan to reconstruct the calisthenics area, which would close it for two years.
+Keep the existing calisthenics bars untouched. Community members have offered to pay for the welding through the newly created &quot;Friends of the Bars at Tompkins Square Park&quot;.
 
-If they cared about current and future users, they would fix some of the rubber transition tiles to the safety surface to make the area ADA Compliant right away, instead of demolishing the whole thing just because they have too much &quot;capital money&quot;.
+If Parks wants to add adaptive equipment, build one new continuous surface that expands the current one so the result is seamless integration, not abhorrent &quot;separate but equal.&quot;
 
-Please don't allow NYC Parks to waste city funds to make the city less affordable, less accessible and less inclusive. For more details, see savetsp.github.io
+I also ask the Board to request evidence that any new adaptive equipment would be used by the people it is meant to serve, and to ask Parks to hold a session where people with disabilities can say how the Park can be improved for them.
 
-On Tue, Nov 24, CB3 votes on NYC Parks' plan. We will be there.
+This approach makes the whole area accessible, preserves the bars, minimizes disruption and does not destroy a vibrant, inclusive and diverse community. More details and photos are at savetsp.github.io.
 
-Thank you,</textarea>
+Thank you for your service and for considering my request.
 
-  <div class="buttons">
-    <a class="go" id="send" href="#" data-goatcounter-click="email-leaders">Email now</a>
-    <button class="go secondary" id="copy" type="button" data-goatcounter-click="copy-email-leaders">Copy message</button>
-  </div>
-  <div id="copy-msg" role="status"></div>
-  <p class="hint">"Email now" opens your email app with the message filled in. If you use email in a browser, such as Gmail, tap "Copy message" and paste it into a new email. The addresses are included.</p>
-
-  <h2>Who gets it</h2>
-  <ul>
-    <li><strong>Community Board 3.</strong> The full board votes on the plan on Nov 24.</li>
-    <li><strong>Parks Commissioner Tricia Shimamura.</strong> Heads the agency that wrote the plan.</li>
-    <li><strong>Borough President Brad Hoylman-Sigal.</strong> Appoints the members of Community Board 3.</li>
-  </ul>
-
-  <h2>Also write to the Mayor and the Comptroller</h2>
-  <p>They take messages by web form. Copy the message, then paste it in. On the Mayor's form, ask them to share it with Deputy Mayor for Operations Julia Kerson, who oversees Parks.</p>
-  <div class="buttons">
-    <button class="go secondary" id="copy-form" type="button" data-goatcounter-click="copy-contact-message">Copy message</button>
-    <a class="go" href="https://www.nyc.gov/mayors-office/contact-the-mayor" target="_blank" rel="noopener" data-goatcounter-click="form-mayor">Mayor</a>
-    <a class="go" href="https://comptroller.nyc.gov/about/contact-our-office/#help-form" target="_blank" rel="noopener" data-goatcounter-click="form-comptroller">Comptroller</a>
-  </div>
-  <div id="form-msg" role="status"></div>
+Sincerely,</textarea>
+    <div class="buttons">
+      <a class="go" id="send" href="#" data-goatcounter-click="email-leaders">Email now</a>
+      <button class="go secondary" id="copy" type="button" data-goatcounter-click="copy-email-leaders">Copy message</button>
+    </div>
+    <div id="copy-msg" role="status"></div>
+    <p class="hint">Use Gmail in a browser? Tap &ldquo;Copy message&rdquo; and paste it into a new email. The addresses are included.</p>
+  </details>
 
   <a class="back" href="index.html#act">&larr; More things you can do</a>
 </main>
@@ -106,15 +96,14 @@ Thank you,</textarea>
 </footer>
 
 <script>
-  var TO = ['mn03@cb.nyc.gov', 't.shimamura@parks.nyc.gov', 'info@manhattanbp.nyc.gov'].join(',');
-  document.getElementById('to-list').textContent = TO.split(',').join(', ');
-  var CC = 'savetsp@gmail.com';
+  var TO = 'mn03@cb.nyc.gov';
+  var CC = 't.shimamura@parks.nyc.gov,info@manhattanbp.nyc.gov,savetsp@gmail.com';
   var subject = document.getElementById('subject');
   var body = document.getElementById('body');
   var nameBox = document.getElementById('name');
   var zipBox = document.getElementById('zip');
 
-  // The message with the name and ZIP from the boxes at the top added after "Thank you,"
+  // The message with the name and ZIP from the boxes added after "Sincerely,"
   function signed() {
     return [body.value.replace(/\s+$/, ''), nameBox.value.trim(), zipBox.value.trim()].filter(Boolean).join('\n');
   }
@@ -124,7 +113,9 @@ Thank you,</textarea>
     location.href = 'mailto:' + TO + '?cc=' + CC + '&subject=' + encodeURIComponent(subject.value) + '&body=' + encodeURIComponent(signed().replace(/\r?\n/g, '\r\n'));
   }); });
 
-  function copy(text, box, done) {
+  document.getElementById('copy').addEventListener('click', function () {
+    var text = 'To: ' + TO + '\nCc: ' + CC.split(',').join(', ') + '\nSubject: ' + subject.value + '\n\n' + signed();
+    var box = document.getElementById('copy-msg'), done = 'Copied. Paste it into a new email.';
     function fallback() {
       var area = document.createElement('textarea');
       area.value = text; document.body.appendChild(area); area.select();
@@ -138,12 +129,6 @@ Thank you,</textarea>
     } else {
       fallback();
     }
-  }
-  document.getElementById('copy').addEventListener('click', function () {
-    copy('To: ' + TO + '\nCc: ' + CC + '\nSubject: ' + subject.value + '\n\n' + signed(), document.getElementById('copy-msg'), 'Copied. Paste it into a new email to the addresses above.');
-  });
-  document.getElementById('copy-form').addEventListener('click', function () {
-    copy(signed(), document.getElementById('form-msg'), 'Copied. Paste it into each form.');
   });
 </script>
 <script data-goatcounter="https://savetsp.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
