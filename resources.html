@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Resources</title>
-<meta name="description" content="Print a poster, share a post, invite your friends, and download our QR code to make your own.">
+<meta name="description" content="Post on Instagram or TikTok, tag the Mayor and NYC Parks, invite your friends, and download our QR code.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://savetsp.github.io/resources.html">
 <meta property="og:image" content="https://savetsp.github.io/img/preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:title" content="Resources. Save Tompkins Square Park">
-<meta property="og:description" content="Print a poster, share a post, invite your friends, and download our QR code to make your own.">
+<meta property="og:description" content="Post on Instagram or TikTok, tag the Mayor and NYC Parks, invite your friends, and download our QR code.">
 <link rel="stylesheet" href="style.css?v=1022d">
 <style>
   .page { max-width: 720px; padding-top: 20px; padding-bottom: 40px; }
@@ -25,6 +25,7 @@
   .hint { color: var(--muted); font-size: .9rem; }
   #post { width: 100%; font: inherit; font-size: 1rem; line-height: 1.45; padding: 10px 12px; border: 1px solid #bdbdbd; border-radius: 6px; background: #fff; color: var(--ink); resize: vertical; }
   #post-msg { min-height: 1.2em; color: var(--done); font-size: .9rem; margin-top: 8px; }
+  .tags { padding-left: 1.2em; } .tags li { margin-bottom: 6px; }
 </style>
 </head>
 <body>
@@ -34,37 +35,22 @@
 <main class="wrap page">
   <a href="index.html">&larr; Back</a>
   <h1>Resources</h1>
-  <p>Post it, print it, share it. Help us get the word out.</p>
+  <p>Post it, tag it, share it. Help us get the word out.</p>
 
-  <h2>Post on Instagram</h2>
-  <p>Follow and tag <a href="https://www.instagram.com/save.tompkins/" target="_blank" rel="noopener" data-goatcounter-click="instagram-resources">@save.tompkins</a> and <a href="https://www.instagram.com/212mal/" target="_blank" rel="noopener" data-goatcounter-click="instagram-212mal">@212Mal</a> in your posts, and use our hashtags, <strong>#SaveTSP</strong> and <strong>#SaveTompkins</strong>. Here is a post you can copy, or write your own.</p>
-  <textarea id="post" readonly rows="6">Tue, Nov 24, CB3 might allow NYC Parks to use city money to make Tompkins Square Park less affordable, less useful to people with disabilities, and less inclusive. Join us, 6:30pm, PS 20, 166 Essex St. savetsp.github.io @save.tompkins #SaveTSP #SaveTompkins</textarea>
+  <h2>Post on Instagram or TikTok</h2>
+  <p>Film the bars, the courts, or yourself explaining why this place matters. Tag the Mayor and NYC Parks so they see it, and use our hashtags, <strong>#SaveTSP</strong> and <strong>#SaveTompkins</strong>.</p>
+  <ul class="tags">
+    <li><strong>Instagram:</strong> <a href="https://www.instagram.com/nycmayor/" target="_blank" rel="noopener">@nycmayor</a> (Mayor&rsquo;s office), <a href="https://www.instagram.com/zohrankmamdani/" target="_blank" rel="noopener">@zohrankmamdani</a> (Mayor Mamdani), <a href="https://www.instagram.com/nycparks/" target="_blank" rel="noopener">@nycparks</a> (NYC Parks), <a href="https://www.instagram.com/save.tompkins/" target="_blank" rel="noopener">@save.tompkins</a> and <a href="https://www.instagram.com/212mal/" target="_blank" rel="noopener">@212Mal</a></li>
+    <li><strong>TikTok:</strong> <a href="https://www.tiktok.com/@nycmayor" target="_blank" rel="noopener">@nycmayor</a> (Mayor&rsquo;s office) and <a href="https://www.tiktok.com/@zohran_k_mamdani" target="_blank" rel="noopener">@zohran_k_mamdani</a> (Mayor Mamdani)</li>
+  </ul>
+  <p>Here is a post you can copy, or write your own.</p>
+  <textarea id="post" readonly rows="6">Tue, Nov 24, CB3 might allow NYC Parks to use city money to make Tompkins Square Park less affordable, less useful to people with disabilities, and less inclusive. Join us, 6:30pm, PS 20, 166 Essex St. savetsp.github.io @nycmayor @zohrankmamdani @nycparks @save.tompkins #SaveTSP #SaveTompkins</textarea>
   <div class="buttons">
     <button class="go" id="copy-post" type="button" data-goatcounter-click="copy-social-post">Copy post</button>
     <a class="go" href="img/save-me-square.jpg" download="save-me-square.jpg" data-goatcounter-click="download-save-me-square">Get image</a>
     <a class="go" id="rally" href="#" data-goatcounter-click="rally-friends">Invite friends</a>
   </div>
   <div id="post-msg" role="status"></div>
-
-  <h2>Print a poster</h2>
-  <p>Put it up in your building, your shop or your window. Letter is 8.5 by 11 inches, for any home printer. Tabloid is 11 by 17 inches.</p>
-  <div class="posters">
-    <div class="poster">
-      <img src="img/poster-nobody-asked.png?v=4" alt="Poster. Nobody asked for this." loading="lazy">
-      <div class="buttons">
-        <a class="go" href="docs/poster-nobody-asked-letter.pdf?v=4" download data-goatcounter-click="download-nobody-asked-letter">Letter</a>
-        <a class="go" href="docs/poster-nobody-asked-tabloid.pdf?v=4" download data-goatcounter-click="download-nobody-asked-tabloid">Tabloid</a>
-      </div>
-    </div>
-    <div class="poster">
-      <img src="img/poster-save-me.png" alt="Hand-drawn poster: Tompkins Square Bar Park. Save me! A sketch of a person upside down among blue, red and green bars." loading="lazy">
-      <div class="buttons">
-        <a class="go" href="docs/poster-save-me-letter.pdf" download data-goatcounter-click="download-save-me-letter">Letter</a>
-        <a class="go" href="docs/poster-save-me-tabloid.pdf" download data-goatcounter-click="download-save-me-tabloid">Tabloid</a>
-      </div>
-      <p class="photo-credit">Art by Joe S.</p>
-    </div>
-  </div>
 
   <h2>Make your own</h2>
   <p>Add <a href="img/savetsp-qr.png" download="savetsp-qr.png" data-goatcounter-click="download-qr">our QR code</a> to your own poster or flyer. It links to this site.</p>
